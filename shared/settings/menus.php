@@ -140,7 +140,7 @@ $setting['menus']=array (
                         0 =>
                             array (
                                 'menu_id' => '22',
-                                'class_name' => 'mp3/mp3',
+                                'class_name' => 'story/index',
                                 'method_name' => 'home',
                                 'menu_name' => '故事列表',
                             ),

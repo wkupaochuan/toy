@@ -45,6 +45,7 @@ if (defined('ENVIRONMENT'))
 			exit('The application environment is not set correctly.');
 	}
 }
+error_reporting(-1);
 
 /*
  *---------------------------------------------------------------

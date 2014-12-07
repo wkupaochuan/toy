@@ -143,7 +143,6 @@ class Acl
      */
 	public function show_left_menus()
 	{
-
 		foreach ($this->left_menus as $v)
 		{
 			if ($v['sub_menus'])

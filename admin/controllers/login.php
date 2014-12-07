@@ -1,37 +1,17 @@
 <?php if ( ! defined('IN_DILICMS')) exit('No direct script access allowed');
-/**
- * DiliCMS
- *
- * 一款基于并面向CodeIgniter开发者的开源轻型后端内容管理系统.
- *
- * @package     DiliCMS
- * @author      DiliCMS Team
- * @copyright   Copyright (c) 2011 - 2012, DiliCMS Team.
- * @license     http://www.dilicms.com/license
- * @link        http://www.dilicms.com
- * @since       Version 1.0
- * @filesource
- */
+
 
 // ------------------------------------------------------------------------
 
 /**
- * DiliCMS 用户登录/退出控制器
  *
- * @package     DiliCMS
- * @subpackage  Controllers
- * @category    Controllers
- * @author      Jeongee
- * @link        http://www.dilicms.com
+ * 登陆
  */
 class Login extends CI_Controller
 {
-	/**
-     * 构造函数
-     *
-     * @access  public
-     * @return  void
-     */
+
+
+
 	public function __construct()
 	{
 		parent::__construct();
@@ -42,13 +22,11 @@ class Login extends CI_Controller
 	
 	// ------------------------------------------------------------------------
 
+
     /**
      * 默认入口
-     *
-     * @access  public
-     * @return  void
-     */	
-	public function index()
+     */
+    public function index()
 	{
 		if ($this->session->userdata('uid'))
 		{
@@ -62,13 +40,11 @@ class Login extends CI_Controller
 	
 	// ------------------------------------------------------------------------
 
+
     /**
      * 退出
-     *
-     * @access  public
-     * @return  void
-     */	
-	public function quit()
+     */
+    public function quit()
 	{
 		$this->session->sess_destroy();
 		redirect(setting('backend_access_point') . '/login');
@@ -76,20 +52,20 @@ class Login extends CI_Controller
 	
 	// ------------------------------------------------------------------------
 
+
     /**
-     * 用户登录验证
-     *
-     * @access  public
-     * @return  void
-     */	
-	public function _do_post()
+     * 用户登陆验证
+     */
+    public function _do_post()
 	{
-		$username = $this->input->post('username', TRUE);
+        // 获取参数
+		$username = $this->input->post('user_name', TRUE);
 		$password = $this->input->post('password', TRUE);
 		
 		if ($username AND $password)
 		{
 			$admin = $this->user_mdl->get_full_user_by_username($username);
+
 			if ($admin)
 			{
 				if ($admin->password == sha1($password.$admin->salt))

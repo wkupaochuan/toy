@@ -77,7 +77,7 @@
         <p class="red">提示：成功初始化后，请将本控制器删除！</p>
 	</div>
 
-	<p class="footer">Powered by DiliCMS <b><?php echo DILICMS_VERSION; ?></b></p>
+	<p class="footer">Powered by TOY <b><?php echo DILICMS_VERSION; ?></b></p>
 </div>
 
 </body>

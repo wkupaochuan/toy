@@ -4,7 +4,7 @@
 <head>
 <base href="<?php echo base_url().'views/'.setting('backend_theme').'/'; ?>" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title><?php echo setting('backend_title');  ?>----Powered By DiliCMS</title>
+<title><?php echo setting('backend_title');  ?>----Powered By TOY</title>
 <link rel="stylesheet" href="images/admin.css"  type="text/css" />
 </head>
 <body id="login">
@@ -16,7 +16,7 @@
 		</div>
 		<div id="wrapper" class="clearfix">
 			<div class="login_box">
-				<div class="login_title">管理登录</div>
+				<div class="login_title">后台管理登陆</div>
 				<div class="login_cont">
 					<b style="color:red"><?php echo $this->session->flashdata('error'); ?></b>
                     <form action='<?php echo backend_url('login/do'); ?>' method='post'>
@@ -24,7 +24,7 @@
 							<col width="90px" />
 							<col />
 							<tr>
-								<th>用户名：</th><td><input autocomplete="off" class="normal" type="text" name="username" alt="请填写用户名" /></td>
+								<th>用户名：</th><td><input autocomplete="off" class="normal" type="text" name="user_name" alt="请填写用户名" /></td>
 							</tr>
 							<tr>
 								<th>密码：</th><td><input class="normal" type="password" name="password" alt="请填写密码" /></td>
@@ -38,7 +38,7 @@
 				</div>
 			</div>
 		</div>
-		<div id="footer">Power by <a href="http://www.dilicms.com/">DiliCMS</a> <b><?php echo DILICMS_VERSION; ?></b> Copyright &copy; 2011 - 2012
+		<div id="footer">Power by xiaomili <b><?php echo DILICMS_VERSION; ?></b> Copyright &copy; 2013 - 2014
         </div>
 	</div>
 </body>

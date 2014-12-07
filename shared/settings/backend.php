@@ -4,6 +4,6 @@ $setting=array (
   'backend_lang' => 'zh-cn',
   'backend_root_access' => '1',
   'backend_access_point' => '',
-  'backend_title' => 'DiliCMS',
+  'backend_title' => 'TOYCMS',
   'backend_logo' => 'images/logo.gif',
 );

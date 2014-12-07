@@ -37,5 +37,15 @@ define('FOPEN_WRITE_CREATE_STRICT',				'xb');
 define('FOPEN_READ_WRITE_CREATE_STRICT',		'x+b');
 
 
+
+/*定义mp3文件的存储位置*/
+define('MP3_FILE_DIR', '/mp3_files');
+
+define('TOY_SITE_URL', 'http://admin.wkupaochuan.com');
+
+
+
+
+
 /* End of file constants.php */
 /* Location: ./application/config/constants.php */
