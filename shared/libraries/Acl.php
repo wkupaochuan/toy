@@ -1,28 +1,10 @@
 <?php if ( ! defined('IN_DILICMS')) exit('No direct script access allowed');
-/**
- * DiliCMS
- *
- * 一款基于并面向CodeIgniter开发者的开源轻型后端内容管理系统.
- *
- * @package     DiliCMS
- * @author      DiliCMS Team
- * @copyright   Copyright (c) 2011 - 2012, DiliCMS Team.
- * @license     http://www.dilicms.com/license
- * @link        http://www.dilicms.com
- * @since       Version 1.0
- * @filesource
- */
+
 
 // ------------------------------------------------------------------------
 
 /**
- * DiliCMS 后台权限控制类
- *
- * @package     DiliCMS
- * @subpackage  Libraries
- * @category    Libraries
- * @author      Jeongee
- * @link        http://www.dilicms.com
+ * 后台权限控制类
  */
 class Acl 
 {
@@ -80,20 +62,13 @@ class Acl
      **/
 	public $rights = array();
 
-	/**
-     * 构造函数
-     *
-     * @access  public
-     * @return  void
-     */
+
 	public function __construct()
 	{
 		$this->ci = & get_instance();
 		$this->ci->settings->load('menus');//加载菜单数据
 		$this->top_menus = & setting('menus');
 
-        //todo 去除
-        $this->ci->_admin->role = 1;
 		if ($this->ci->_admin->role != 1)
 		{
 			$this->ci->settings->load('acl/role_' . $this->ci->_admin->role . '.php');//加载权限数据
@@ -175,13 +150,14 @@ class Acl
 	{
 		$class_name = $this->ci->uri->rsegment(1);
 		$method_name = $this->ci->uri->rsegment(2);
+
 		switch ($class_name)
 		{
-			case 'content' : 
-			case 'category_content' : 
+			case 'content' :
+			case 'category_content' :
 						$this->_filter_content_menus($class_name, $method_name);
 						break;
-			case 'module' : 
+			case 'module' :
 						$this->_filter_module_menus($class_name, $method_name);
 						break;
 			case 'system' :
@@ -191,26 +167,68 @@ class Acl
 			case 'plugin' :
 			case 'role'   :
 			case 'user'   :
-            case 'mp3':
 						$this->_filter_normal_menus($class_name, $method_name);
 						break;
-			default : 
-						 //noting to do
+			default :
+                        $this->_filter_no_menus($class_name, $method_name);
 		}
 	}
+
+    // ------------------------------------------------------------------------
+
+
+    /**
+     * 不过滤菜单
+     * @param $class_name
+     * @param $method_name
+     * @param string $default_uri
+     * @param int $current_menu
+     * @param string $folder
+     */
+    private function _filter_no_menus($class_name, $method_name, $default_uri = 'system/home', $current_menu = 0, $folder = '')
+    {
+        $this->_current_menu = $current_menu;
+        $this->_default_link = backend_url($default_uri);
+        $this->left_menus = & $this->top_menus[$this->_current_menu]['sub_menus'];
+
+        foreach ($this->left_menus as $vkey => & $v)
+        {
+            foreach ($v['sub_menus'] as $jkey => & $j)
+            {
+                if ($j['class_name'] == $folder . $class_name AND $j['method_name'] == $method_name)
+                {
+                    $j['current'] = TRUE;
+                }
+                if ($this->ci->_admin->role == 1)
+                {
+                    continue;
+                }
+                $right = $j['class_name'] . '@' . $j['method_name'];
+                if ( ! in_array($right, $this->rights['rights']) AND $right !='system@home')
+                {
+                    unset($this->left_menus[$vkey]['sub_menus'][$jkey]);
+                }
+            }
+            if ( ! $v['sub_menus'])
+            {
+                unset($this->left_menus[$vkey]);
+            }
+        }
+    }
 	
 	// ------------------------------------------------------------------------
 
+
     /**
      * 过滤系统菜单
-     *
-     * @access  private
-     * @param   string
-     * @param   string
-     * @return  void
+     * @param $class_name
+     * @param $method_name
+     * @param string $default_uri
+     * @param int $current_menu
+     * @param string $folder
      */
-	private function _filter_normal_menus($class_name, $method_name, $default_uri = 'system/home', $current_menu = 0, $folder = '')
-	{//0
+    private function _filter_normal_menus($class_name, $method_name, $default_uri = 'system/home', $current_menu = 0, $folder = '')
+	{
         $this->_current_menu = $current_menu;
 		$this->_default_link = backend_url($default_uri);
 		$this->left_menus = & $this->top_menus[$this->_current_menu]['sub_menus'];
@@ -251,7 +269,7 @@ class Acl
      * @return  void
      */
 	private function _filter_content_menus($class_name, $method_name)
-	{//1
+	{
 		$this->_current_menu = 1;
 		$this->left_menus = & $this->top_menus[$this->_current_menu]['sub_menus'];
 		$extra = $this->ci->input->get('model');
@@ -283,7 +301,7 @@ class Acl
 				unset($this->left_menus[$vkey]);
 			}
 		}
-		//设定默认链接 
+		//设定默认链接
 		if ($_item = @ reset($this->left_menus[0]['sub_menus']))
 		{
 		    if ( ! $this->_default_link)

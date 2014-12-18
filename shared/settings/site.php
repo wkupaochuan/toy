@@ -2,7 +2,7 @@
 $setting=array (
   'site_name' => 'DiliCMS',
   'site_domain' => 'http://www.dilicms.com/',
-  'site_logo' => 'images/logo.gif',
+  'site_logo' => 'images/logo.png',
   'site_icp' => '',
   'site_terms' => '',
   'site_stats' => '',

@@ -18,7 +18,6 @@
             <p><input type="file" name="file_upload" id="file_upload" multiple="true"/></p>
             <p><a href="javascript:$('#file_upload').uploadify('upload')">开始上传</a></p>
         </form>
-
     </div>
 
 </div>
@@ -37,7 +36,6 @@
             'buttonText' : '选择故事', //通过文字替换钮扣上的文字
             'swf'      : 'js/uploadify/uploadify.swf', // 需要的flash
             'uploader' : '/mp3/mp3/upload_new_mp3'            // 处理上传的后端程序
-
         });
     });
 </script>

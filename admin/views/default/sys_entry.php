@@ -46,6 +46,7 @@
 	</div>
 	<div id="separator"></div>
 </div>
+
 <script type='text/javascript'>
 	//隔行换色
 	$(".list_table tr::nth-child(even)").addClass('even');

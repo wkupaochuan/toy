@@ -21,6 +21,8 @@ class Index extends  Admin_Controller{
         $this->_template('story/story_list', $data);
     }
 
+
+
     /**
      * 故事详情页
      */
@@ -29,91 +31,88 @@ class Index extends  Admin_Controller{
         // 获取参数
         $array_params = $this->input->get();
         $story_id = $array_params['story_id'];
-    }
-
-
-    /**
-     * 搜索故事
-     * @param $search_words
-     * @return array
-     */
-    private function get_story_list_by_search($search_words)
-    {
-        $res = array();
-
-        // 获取所有故事
-        $this->load->model('base_model/mp3/mp3_model');
-        $all_storys = $this->mp3_model->get_sotry_list();
-
-        if(!empty($search_words)){
-            // 根据搜索条件获取故事列表
-        }
-        else{
-            $res = $all_storys;
-        }
-
-        return $res;
+$story_id = 2;
+        $story = $this->story_service->get_story_by_id($story_id);
+        $data = array('story_detail' => $story);
+        $this->_template('/story/story_detail', $data);
 
     }
 
 
     /**
-     * 添加故事页面
+     * 初始化添加故事页面
      */
     public function add_story()
     {
-
         $data = array('storys' => 11);
-        $this->_template('mp3/add_sotry', $data);
+        $this->_template('story/add_story_test', $data);
     }
 
 
     /**
-     * 上传故事文件
+     * 上传故事封面文件
      */
-    public function _upload_new_mp3_post()
+    public function _upload_story_cover_post()
     {
-        // 校验
-        $verifyToken = md5('unique_salt' . $_POST['timestamp']);
+        $uploadedFileData = $_FILES['Filedata'];
 
-        // 校验成功
-        if (!empty($_FILES) && $_POST['token'] == $verifyToken) {
+        $tempFile = $uploadedFileData['tmp_name'];
 
-            $uploadedFileData = $_FILES['Filedata'];
+        // Define a destination
+        $targetPath = $_SERVER['DOCUMENT_ROOT'] . MP3_FILE_DIR;
+        $targetFile = $targetPath. '/' .$uploadedFileData['name'];
 
-            $tempFile = $uploadedFileData['tmp_name'];
+        // 移动文件到目的目录
+        $this->moveFile($tempFile,$targetFile);
 
-            // Define a destination
-            $targetPath = $_SERVER['DOCUMENT_ROOT'] . MP3_FILE_DIR;
-            $targetFile = $targetPath. '/' .$uploadedFileData['name'];
+        echo MP3_FILE_DIR.'/'.$uploadedFileData['name'];
+    }
 
-            // 移动文件到目的目录
+
+    /**
+     * 上传故事音频文件
+     */
+    public function _upload_story_mp3_post()
+    {
+        $uploadedFileData = $_FILES['Filedata'];
+
+        $tempFile = $uploadedFileData['tmp_name'];
+
+        // Define a destination
+        $targetPath = $_SERVER['DOCUMENT_ROOT'] . MP3_FILE_DIR;
+        $targetFile = $targetPath. '/' .$uploadedFileData['name'];
+
+        // 移动文件到目的目录
+        $this->moveFile($tempFile,$targetFile);
+
+        echo MP3_FILE_DIR.'/'.$uploadedFileData['name'];
+    }
+
+    public function moveFile($tempFile,$targetFile)
+    {
+        if(!file_exists($targetFile))
+        {
             move_uploaded_file($tempFile,$targetFile);
-
-            // 保存到db
-            $this->addNewStoryInfoToDb($uploadedFileData);
         }
-
     }
-
 
 
     /**
-     * 存储故事信息到DB
-     * @param $uploadedFileData
+     * 新加故事
      */
-    private function addNewStoryInfoToDb($uploadedFileData)
+    public function _add_new_story_post()
     {
-        $new_story = array(
-            'name' => substr($uploadedFileData['name'], 0, strrpos($uploadedFileData['name'], '.'))
-            , 'path' => TOY_SITE_URL.'/'.MP3_FILE_DIR.'/'.$uploadedFileData['name']
+        $array_params = $this->input->post();
+
+        $array_new_story = array(
+            'name' => $array_params['story_title']
+            , 'story_cover_path' => $array_params['story_cover']
+            , 'path' => $array_params['story_mp3']
         );
-        // 添加故事信息
-        $this->load->model('base_model/mp3/mp3_model');
-        $this->mp3_model->add_new_story($new_story);
+
+        $res = $this->story_service->add_new_story($array_new_story);
+        print_r($res);
     }
-
-
 
 
 } 
