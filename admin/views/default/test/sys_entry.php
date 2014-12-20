@@ -28,11 +28,13 @@
             当前身份 <label class='bold'>{$admin_role_name}</label></span>
         </p>
 	</div>
+    <!--
 	<div id="info_bar">
         <span class="nav_sec">
             {$trigger_navigation}
         </span>
     </div>
+    -->
 	<div id="admin_left">
 		<ul class="submenu">
             {$system_left_menus}

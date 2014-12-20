@@ -130,7 +130,7 @@ abstract class Smarty_Internal_TemplateBase extends Smarty_Internal_Data
             print_r($this->smarty->template_dir);
             print_r("Unable to load template {$_template->source->type} '{$_template->source->name}'{$parent_resource}");
             throw new SmartyException("Unable to load template {$_template->source->type} '{$_template->source->name}'{$parent_resource}");
-        }echo 77;
+        }
         // read from cache or render
         if (!($_template->caching == Smarty::CACHING_LIFETIME_CURRENT || $_template->caching == Smarty::CACHING_LIFETIME_SAVED) || !$_template->cached->valid) {
             // render template (not loaded and not in cache)

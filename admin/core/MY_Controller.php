@@ -1,22 +1,8 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
-/**
- * DiliCMS
- *
- * 一款基于并面向CodeIgniter开发者的开源轻型后端内容管理系统.
- *
- * @package     DiliCMS
- * @author      DiliCMS Team
- * @copyright   Copyright (c) 2011 - 2012, DiliCMS Team.
- * @license     http://www.dilicms.com/license
- * @link        http://www.dilicms.com
- * @since       Version 1.0
- * @filesource
- */
 
 // ------------------------------------------------------------------------
 
 /**
- * DiliCMS 后台控制器基类
  *
  * @package     DiliCMS
  * @subpackage  core
@@ -35,13 +21,11 @@ abstract class Admin_Controller extends CI_Controller
      **/
 	public $_admin = NULL;
 
-	/**
-     * 构造函数
-     *
-     * @access  public
-     * @return  void
+
+    /**
+     *构造函数
      */
-	public function __construct()
+    public function __construct()
 	{
 		parent::__construct();
 		$this->load->library('session');
@@ -121,8 +105,6 @@ abstract class Admin_Controller extends CI_Controller
 
         $this->cismarty->assign('system_left_menus', $this->acl->show_left_menus());
 
-
-
         $this->cismarty->assign('content_html',$html);
         $this->cismarty->display('test/sys_entry.php');
     }
@@ -131,12 +113,10 @@ abstract class Admin_Controller extends CI_Controller
 
     /**
      * 检查权限
-     *
-     * @access  protected
-     * @param   string
-     * @return  void
+     * @param string $action
+     * @param string $folder
      */
-	protected function _check_permit($action = '', $folder = '')
+    protected function _check_permit($action = '', $folder = '')
 	{
 		if ( ! $this->acl->permit($action, $folder))
 		{
@@ -176,6 +156,4 @@ abstract class Admin_Controller extends CI_Controller
 
 }
 
-/* End of file Dili_Controller.php */
-/* Location: ./admin/core/Dili_Controller.php */
 	

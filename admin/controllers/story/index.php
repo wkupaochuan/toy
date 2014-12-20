@@ -43,8 +43,7 @@ class Index extends  Admin_Controller{
      */
     public function add_story()
     {
-        $data = array('storys' => 11);
-        $this->_template('story/add_story_test', $data);
+        $this->display('story/add_story_test.php');
     }
 
 
