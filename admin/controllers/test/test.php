@@ -18,9 +18,8 @@ class Test extends  Admin_Controller{
      */
     public function home()
     {
-
-        $data = array('storys' => 1222);
-        $this->_template('test/test', $data);
+        $this->assign('storys', 1222);
+        $this->display('test/test.php');
     }
 
 

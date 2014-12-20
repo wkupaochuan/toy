@@ -1,6 +1,7 @@
 <?php if ( ! defined('IN_DILICMS')) exit('No direct script access allowed');?>
 
 <script src="js/jquery.js" type="text/javascript"></script>
+<script src="js/common/common.js" type="text/javascript"></script>
 <script src="js/uploadify/jquery.uploadify.min.js?ver=<?php echo rand(0,9999);?>" type="text/javascript"></script>
 <link rel="stylesheet" type="text/css" href="js/uploadify/uploadify.css">
 <style type="text/css">
@@ -88,6 +89,12 @@
                 data: params,
                 dataType: "json",
                 success: function(data){
+                    alert('成功');
+                    window.location.href = '/story/index/home';
+//                    W.message('添加成功', 'success', function() {
+//                        //窗口关闭后再刷新页面
+//                        window.location.href = '/story/index/home';
+//                    });
                 }
             });
         });
@@ -131,7 +138,5 @@
         //通过上传的图片来动态生成text来保存路径
         $('#story_cover').val(file_path);
     }
-
-
 
 </script>

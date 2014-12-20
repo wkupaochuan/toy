@@ -92,8 +92,42 @@ abstract class Admin_Controller extends CI_Controller
 		$data['tpl'] = $template;
 		$this->load->view('sys_entry', $data);
 	}
-	
-	// ------------------------------------------------------------------------
+
+
+    /**
+     * smarty
+     * @param $key
+     * @param $val
+     */
+    public function assign($key,$val) {
+        $this->cismarty->assign($key,$val);
+    }
+
+    /**
+     * cismarty
+     * @param $html
+     */
+    public function display($html) {
+        $this->cismarty->assign('backend_title',setting('backend_title'));
+        $this->cismarty->assign('base_url', base_url().'views/'.setting('backend_theme').'/');
+        $this->cismarty->assign('backend_logo', setting('backend_logo'));
+        $this->cismarty->assign('top_menus', $this->acl->show_top_menus());
+        $this->cismarty->assign('quit_url', backend_url('login/quit'));
+        $this->cismarty->assign('system_home_url', backend_url('system/home'));
+        $this->cismarty->assign('site_home_url', base_url().'../');
+        $this->cismarty->assign('admin_user_name', $this->_admin->username);
+        $this->cismarty->assign('admin_role_name', $this->_admin->name);
+        $this->cismarty->assign('trigger_navigation', $this->plugin_manager->trigger_navigation());
+
+        $this->cismarty->assign('system_left_menus', $this->acl->show_left_menus());
+
+
+
+        $this->cismarty->assign('content_html',$html);
+        $this->cismarty->display('test/sys_entry.php');
+    }
+
+    // ------------------------------------------------------------------------
 
     /**
      * 检查权限

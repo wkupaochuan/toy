@@ -23,7 +23,7 @@ class Story_model extends CI_Model{
     {
         // 查询sql
         $s_sql = <<<EOD
-	        select * from $this->_table_name
+	        select * from $this->_table_name order by id desc
 EOD;
 
         // 查询

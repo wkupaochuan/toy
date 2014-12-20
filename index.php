@@ -191,6 +191,7 @@ error_reporting(-1);
 
 		define('APPPATH', BASEPATH.$application_folder.'/');
 	}
+
 //加载DiliCMS常量
 require_once FCPATH . 'shared/config/constant.php';
 /*
@@ -201,6 +202,9 @@ require_once FCPATH . 'shared/config/constant.php';
  * And away we go...
  *
  */
+
+define('SHARED_PATH', FCPATH . 'shared/');
+
 require_once BASEPATH.'core/CodeIgniter.php';
 
 /* End of file index.php */

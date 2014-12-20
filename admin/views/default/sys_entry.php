@@ -17,7 +17,7 @@
 		</div>
 		<div id="menu">
 			<ul name="menu">
-                <?php $this->acl->show_top_menus(); ?>
+                <?php echo $this->acl->show_top_menus(); ?>
             </ul>
 		</div>
 		<p>
@@ -30,18 +30,25 @@
 	</div>
 	<div id="info_bar">
     <span class="nav_sec">    	
-        <?php $this->plugin_manager->trigger_navigation(); ?>
+        <?php echo $this->plugin_manager->trigger_navigation(); ?>
 	</span></div>
 	<div id="admin_left">
 		<ul class="submenu">
-            <?php $this->acl->show_left_menus(); ?>
+            <?php echo $this->acl->show_left_menus(); ?>
         </ul>
 	</div>
 	<div id="admin_right">
     	<?php if($this->uri->rsegment(1) != 'module'): ?>
-    	<?php $this->load->view(isset($tpl) && $tpl ? $tpl : 'sys_default'); ?>
+    	    <?php $this->load->view(isset($tpl) && $tpl ? $tpl : 'sys_default'); ?>
         <?php else: ?>
-        <?php if(!isset($msg)){echo $content;}else{$this->load->view($tpl);} ?>
+            <?php
+                if(!isset($msg)){
+                    echo $content;
+                }
+                else{
+                    $this->load->view($tpl);
+                }
+             ?>
         <?php endif; ?>
 	</div>
 	<div id="separator"></div>

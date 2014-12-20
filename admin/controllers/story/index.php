@@ -16,9 +16,8 @@ class Index extends  Admin_Controller{
     public function home()
     {
         $array_story_list = $this->story_service->get_story_list();
-
-        $data = array('storys' => $array_story_list);
-        $this->_template('story/story_list', $data);
+        $this->assign('storys', $array_story_list);
+        $this->display('story/story_list.php');
     }
 
 
@@ -31,7 +30,7 @@ class Index extends  Admin_Controller{
         // 获取参数
         $array_params = $this->input->get();
         $story_id = $array_params['story_id'];
-$story_id = 2;
+        $story_id = 2;
         $story = $this->story_service->get_story_by_id($story_id);
         $data = array('story_detail' => $story);
         $this->_template('/story/story_detail', $data);
@@ -60,12 +59,13 @@ $story_id = 2;
 
         // Define a destination
         $targetPath = $_SERVER['DOCUMENT_ROOT'] . MP3_FILE_DIR;
-        $targetFile = $targetPath. '/' .$uploadedFileData['name'];
+        $targetFileName = time().'.'.pathinfo($uploadedFileData['name'], PATHINFO_EXTENSION);
+        $targetFile = $targetPath. '/' .$targetFileName;
 
         // 移动文件到目的目录
         $this->moveFile($tempFile,$targetFile);
 
-        echo MP3_FILE_DIR.'/'.$uploadedFileData['name'];
+        echo MP3_FILE_DIR.'/'.$targetFileName;
     }
 
 
@@ -80,12 +80,13 @@ $story_id = 2;
 
         // Define a destination
         $targetPath = $_SERVER['DOCUMENT_ROOT'] . MP3_FILE_DIR;
-        $targetFile = $targetPath. '/' .$uploadedFileData['name'];
+        $targetFileName = time().'.'.pathinfo($uploadedFileData['name'], PATHINFO_EXTENSION);
+        $targetFile = $targetPath. '/' .$targetFileName;
 
         // 移动文件到目的目录
         $this->moveFile($tempFile,$targetFile);
 
-        echo MP3_FILE_DIR.'/'.$uploadedFileData['name'];
+        echo MP3_FILE_DIR.'/'.$targetFileName;
     }
 
     public function moveFile($tempFile,$targetFile)

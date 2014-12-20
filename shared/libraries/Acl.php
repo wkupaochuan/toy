@@ -116,7 +116,7 @@ class Acl
      * @access  public
      * @return  void
      */
-	public function show_left_menus()
+	public function show_left_menus_bak()
 	{
 		foreach ($this->left_menus as $v)
 		{
@@ -129,16 +129,41 @@ class Acl
 						   $extra = '';
 						   $this->_current_menu ==  1 AND $extra =  'model=' . $j['extra'] ;
 						   $this->_current_menu ==  2 AND $extra = $j['extra'];
-						   echo '<li class="' . (isset($j['current']) ? 'selected' : '') .'"><a href="' . 
+						   echo '<li class="' . (isset($j['current']) ? 'selected' : '') .'"><a href="' .
 						   		backend_url($j['class_name'] . '/' . $j['method_name'], $extra) . '">' . $j['menu_name'] . '</a></li>';
 						 }
 				echo	 '</ul>
-				      </li>';	
+				      </li>';
 			}
 		}
 	}
-	
-	// ------------------------------------------------------------------------
+
+    public function show_left_menus()
+    {
+        foreach ($this->left_menus as $v)
+        {
+            if ($v['sub_menus'])
+            {
+                $res = '';
+                $res .= '<li><span>' . $v['menu_name'] . '</span>
+					     <ul name="menu">';
+                foreach ($v['sub_menus'] as $j)
+                {
+                    $extra = '';
+                    $this->_current_menu ==  1 AND $extra =  'model=' . $j['extra'] ;
+                    $this->_current_menu ==  2 AND $extra = $j['extra'];
+                    $res .= '<li class="' . (isset($j['current']) ? 'selected' : '') .'"><a href="' .
+                        backend_url($j['class_name'] . '/' . $j['method_name'], $extra) . '">' . $j['menu_name'] . '</a></li>';
+                }
+                $res .=	 '</ul>
+				      </li>';
+            }
+        }
+        return $res;
+    }
+
+
+    // ------------------------------------------------------------------------
 
     /**
      * 过滤菜单

@@ -41,7 +41,11 @@ define('FOPEN_READ_WRITE_CREATE_STRICT',		'x+b');
 /*定义mp3文件的存储位置*/
 define('MP3_FILE_DIR', '/mp3_files');
 
-define('TOY_SITE_URL', 'http://admin.wkupaochuan.com');
+/*api地址*/
+define('TOY_API_URL', 'http://toy-admin.wkupaochuan.com');
+
+/*后台管理地址*/
+define('TOY_ADMIN_URL', 'http://toy-admin.wkupaochuan.com');
 
 
 
