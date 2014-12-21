@@ -1,5 +1,5 @@
 <?php if ( ! defined('IN_DILICMS')) exit('No direct script access allowed');?>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
 <style type="text/css">
     table.gridtable {
         font-family: verdana,arial,sans-serif;

@@ -6,8 +6,27 @@
 <base href="{$base_url}" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" href="images/admin.css" />
-<script language="javascript" src="js/jquery.js"></script>
+    <!--
+
 <script language="javascript" src="js/admin.js"></script>
+-->
+<script type="text/javascript" src="js/lib/seajs/sea.js"></script>
+<script type="text/javascript" src="js/jquery.js"></script>
+    <script type='text/javascript'>
+        seajs.config({
+            alias: {
+                "jquery": "jquery/1.8.2/jquery.js"
+            },
+            base: '/views/default/js/module',
+            charset: 'utf-8'
+
+        });
+
+        seajs.use('default/default_table', function(detail){
+            detail.init();
+        });
+
+    </script>
 </head>
 <body>
 <div class="container">
@@ -45,18 +64,5 @@
 	</div>
 	<div id="separator"></div>
 </div>
-
-<script type='text/javascript'>
-	//隔行换色
-	$(".list_table tr::nth-child(even)").addClass('even');
-	$(".list_table tr").hover(
-		function () {
-			$(this).addClass("sel");
-		},
-		function () {
-			$(this).removeClass("sel");
-		}
-	);
-</script>
 </body>
 </html>

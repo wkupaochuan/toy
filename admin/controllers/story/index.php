@@ -34,7 +34,6 @@ class Index extends  Admin_Controller{
         $story = $this->story_service->get_story_by_id($story_id);
         $data = array('story_detail' => $story);
         $this->_template('/story/story_detail', $data);
-
     }
 
 
