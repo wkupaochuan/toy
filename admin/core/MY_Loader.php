@@ -35,6 +35,15 @@ class MY_Loader extends CI_Loader{
         $this->_ci_view_paths = array(APPPATH . 'views/' . $theme . '/'	=> TRUE);
     }
 
+
+    public function service($service = '', $params = NULL, $object_name = NULL)
+    {
+        // 加载service
+        $this->_service($service , $params , $object_name);
+
+        // 返回service
+    }
+
     /**
      * Service Loader
      *
@@ -46,7 +55,7 @@ class MY_Loader extends CI_Loader{
      * @param	string	an optional object name
      * @return	void
      */
-    public function service($service = '', $params = NULL, $object_name = NULL)
+    private function _service($service = '', $params = NULL, $object_name = NULL)
     {
         if(is_array($service))
         {

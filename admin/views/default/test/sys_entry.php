@@ -6,12 +6,11 @@
 <base href="{$base_url}" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" href="images/admin.css" />
-    <!--
 
-<script language="javascript" src="js/admin.js"></script>
--->
 <script type="text/javascript" src="js/lib/seajs/sea.js"></script>
 <script type="text/javascript" src="js/jquery.js"></script>
+<script src="js/uploadify/jquery.uploadify.min.js?ver=<?php echo rand(0,9999);?>" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="js/uploadify/uploadify.css">
     <script type='text/javascript'>
         seajs.config({
             alias: {

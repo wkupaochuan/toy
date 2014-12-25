@@ -73,6 +73,7 @@
  *
  *
  * @property story_service                          $story_service
+ * @property class_service                          $class_service
  *
 
  */

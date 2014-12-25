@@ -11,6 +11,8 @@
  * ---------------------- Models to Load ----------------------
  *
  * @property story_model        $story_model
+ * @property class_type_model        $class_type_model
+ * @property class_model        $class_model
  *
  *
  *

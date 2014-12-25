@@ -9,7 +9,6 @@ class Index extends  Admin_Controller{
         $this->load->service('story/story_service');
     }
 
-
     /**
      * 获取故事列表
      */
@@ -19,7 +18,6 @@ class Index extends  Admin_Controller{
         $this->assign('storys', $array_story_list);
         $this->display('story/story_list.php');
     }
-
 
 
     /**
