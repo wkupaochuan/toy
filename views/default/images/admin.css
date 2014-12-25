@@ -366,9 +366,11 @@ table.gridtable th {
     border-width: 3px;
     padding: 8px;
     border-style: solid;
-    border-color: #666666;
+    border-color: #666fd6;
     background-color: #dedede;
 }
+
+
 table.gridtable td {
     border-width: 3px;
     padding: 8px;
