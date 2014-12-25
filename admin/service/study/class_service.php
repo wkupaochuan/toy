@@ -64,6 +64,22 @@ class Class_service extends MY_Service{
     }
 
 
+    /**
+     * 获取课程详情
+     * @param $class_id
+     * @return null
+     */
+    public function get_class_by_id($class_id)
+    {
+        $class_detail = $this->class_model->get_class_detail_by_id($class_id);
+        if(!empty($class_detail))
+        {
+            $class_detail['class_cover_path'] = TOY_ADMIN_URL . $class_detail['class_cover_path'];
+        }
+        return $class_detail;
+    }
+
+
 
 
 }

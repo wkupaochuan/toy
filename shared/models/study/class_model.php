@@ -47,4 +47,22 @@ EOD;
     }
 
 
+    /**
+     * 获取课程详情
+     * @param $class_id
+     * @return null
+     */
+    public function get_class_detail_by_id($class_id)
+    {
+        $table_name = self::$_table_name;
+        $str_sql = <<<EOD
+            select * from $table_name where class_id = $class_id
+EOD;
+
+        $res = $this->db->query($str_sql);
+        $res = empty($res)? null:$res->result_array();
+        return empty($res)? null:$res[0];
+    }
+
+
 } 

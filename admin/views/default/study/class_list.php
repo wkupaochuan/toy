@@ -11,7 +11,11 @@
             </tr>
             {foreach $class_list as $class}
             <tr>
-                <td>{$class['class_title']}</td>
+                <td>
+                    <a href="/study/index/class_detail_page?class_id={$class['class_id']}">
+                        {$class['class_title']}
+                    </a>
+                </td>
                 <td>{$class_type_map[$class['class_type_id']]}</td>
                 <td><img class="my_img" src="{$class['class_cover_path']}"/></td>
             </tr>
