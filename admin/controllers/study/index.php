@@ -81,6 +81,22 @@ class Index  extends  Admin_Controller{
     }
 
 
+    /**
+     * 诗歌详情页
+     * 1--可修改、可添加
+     */
+    public function poetry_detail_page()
+    {
+        $this->display('study/poetry_detail_page.php');
+    }
+
+
+    public function _add_poetry_sentences_post()
+    {
+        $params = $this->input->post();
+        print_r($params);exit;
+    }
+
 /**********************************private method*****************************************************************/
 
 

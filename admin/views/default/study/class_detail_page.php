@@ -20,7 +20,9 @@
             </tr>
             <tr>
                 <td colspan="2">
-                    <input type="button" value="添加诗句" id="add_sentence">
+                    {if $class_detail['class_type_id'] == 1}
+                        <a href="/study/index/poetry_detail_page?class_id={$class_detail['class_id']}">添加诗句</a>
+                    {/if}
                 </td>
             </tr>
         </table>
