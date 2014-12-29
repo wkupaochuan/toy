@@ -2,7 +2,14 @@
 
 /*
  *---------------------------------------------------------------
+<<<<<<< HEAD
  * APPLICATION ENVIRONMENT dddd
+=======
+ * APPLICATION ENVIRONMENT jixiaofeng
+ *
+ * jixiaofeng
+ *
+>>>>>>> FETCH_HEAD
  *---------------------------------------------------------------
  *
  * You can load different configurations depending on your
