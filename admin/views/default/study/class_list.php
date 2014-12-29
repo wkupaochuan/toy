@@ -10,6 +10,7 @@
                 <th>课程封面</th>
             </tr>
             {foreach $class_list as $class}
+            {if !empty($class['class_type_id'])}
             <tr>
                 <td>
                     <a href="/study/index/class_detail_page?class_id={$class['class_id']}">
@@ -19,6 +20,7 @@
                 <td>{$class_type_map[$class['class_type_id']]}</td>
                 <td><img class="my_img" src="{$class['class_cover_path']}"/></td>
             </tr>
+            {/if}
             {/foreach}
         </table>
         <a href="/study/index/add_class_page"><span>添加新课程</span></a>

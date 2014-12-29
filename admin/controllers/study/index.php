@@ -58,7 +58,6 @@ class Index  extends  Admin_Controller{
         $this->assign('class_list', $class_list);
 
         $this->display('study/class_list.php');
-
     }
 
 
