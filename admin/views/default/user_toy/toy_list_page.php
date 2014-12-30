@@ -7,6 +7,7 @@
             <tr>
                 <th>玩具编号</th>
                 <th>添加时间</th>
+                <th>操作</th>
             </tr>
             {foreach $toy_list as $toy}
             <tr>
@@ -14,6 +15,9 @@
                     {$toy['toy_unique_id']}
                 </td>
                 <td>{$toy['created_time']}</td>
+                <td>
+                    <a href="/user_toy/index/set_class_page?toy_id={$toy['toy_id']}">课程设置</a>
+                </td>
             </tr>
             {/foreach}
         </table>
