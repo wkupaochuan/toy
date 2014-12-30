@@ -81,5 +81,11 @@ class Class_service extends MY_Service{
 
 
 
+    public function batch_add_poetrys($data)
+    {
+        $this->load->model('study/poetry_model');
+
+        $this->poetry_model->batch_add_poetry_sentence($data);
+    }
 
 }

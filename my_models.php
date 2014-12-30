@@ -13,6 +13,8 @@
  * @property story_model        $story_model
  * @property class_type_model        $class_type_model
  * @property class_model        $class_model
+ * @property poetry_model       $poetry_model
+ * @property user_toy_model     $user_toy_model
  *
  *
  *

@@ -179,6 +179,23 @@ $setting['menus']=array (
 
                         ),
                 ),
+            7 =>
+                array (
+                    'menu_id' => '27',
+                    'class_name' => 'role',
+                    'method_name' => 'view',
+                    'menu_name' => '玩具管理',
+                    'sub_menus' =>
+                        array (
+                            0 =>
+                                array (
+                                    'menu_id' => '28',
+                                    'class_name' => 'user_toy/index',
+                                    'method_name' => 'toy_list_page',
+                                    'menu_name' => '玩具列表',
+                                )
+                        ),
+                ),
     ),
   ),
   1 => 

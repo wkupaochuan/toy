@@ -86,15 +86,26 @@ class Index  extends  Admin_Controller{
      */
     public function poetry_detail_page()
     {
+        $class_id = $this->input->get('class_id');
+
+        $this->assign('class_id', $class_id);
         $this->display('study/poetry_detail_page.php');
     }
 
 
+    /**
+     * 添加诗句
+     */
     public function _add_poetry_sentences_post()
     {
+        // 获取参数
         $params = $this->input->post();
-        print_r($params);exit;
+
+        $this->class_service->batch_add_poetrys($params);
     }
+
+
+
 
 /**********************************private method*****************************************************************/
 
