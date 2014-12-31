@@ -4,6 +4,36 @@
 <div class="content_box">
     <div class="content form_content">
         玩具编号:{$toy_detail['toy_unique_id']}
+        {if !empty($choosen_class_list)}
+        <table class="gridtable">
+            <caption>已经选择的课程</caption>
+            <tr>
+                <th>课程名称</th>
+                <th>时间</th>
+                <th>修炼进度</th>
+                <th>闯关得分</th>
+            </tr>
+            {foreach $choosen_class_list as $class}
+            <tr>
+                <td>
+                    {$class['class_title']}
+                </td>
+                <td>
+                    {$class['expected_time']}
+                </td>
+                <td>
+                    {$class['learning_progress']}
+                </td>
+                <td>
+                    {$class['checkpoint_score']}
+                </td>
+            </tr>
+            {/foreach}
+        </table>
+        {/if}
+
+
+        <br><br>
         <table class="gridtable" id="class_list_table">
             <tr>
                 <th>选中</th>
@@ -29,6 +59,7 @@
         <input type="button" value="提交" id="submit"/>
     </div>
 </div>
+<input type="hidden" value="{$toy_detail['toy_id']}" id="toy_id">
 <script type="text/javascript">
     seajs.use('user_toy/set_class');
 </script>

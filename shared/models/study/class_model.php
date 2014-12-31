@@ -48,6 +48,28 @@ EOD;
 
 
     /**
+     * 获取课程列表
+     * @param $class_ids
+     * @return null
+     */
+    public function get_class_list_by_ids($class_ids)
+    {
+        $str_where = '';
+        if(!empty($class_ids))
+        {
+            $str_where = ' where class_id not in (' . implode(',', $class_ids) .')';
+        }
+        $table_name = self::$_table_name;
+        $str_sql = <<<EOD
+            select * from $table_name $str_where
+EOD;
+
+        $res = $this->db->query($str_sql);
+        return empty($res)? null:$res->result_array();
+    }
+
+
+    /**
      * 获取课程详情
      * @param $class_id
      * @return null
@@ -61,7 +83,7 @@ EOD;
 
         $res = $this->db->query($str_sql);
         $res = empty($res)? null:$res->result_array();
-        return empty($res)? null:$res[0];
+        return empty($res)? null:$res->result_array();
     }
 
 

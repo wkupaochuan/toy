@@ -37,15 +37,19 @@ class index extends Admin_Controller{
         $this->load->service('user_toy/user_toy_service');
         $toy_detail = $this->user_toy_service->get_toy_by_id($toy_id);
 
+        // 获取已经选定的每日课程
+        $this->load->service('user_toy/daily_class_service');
+        $choosen_class_list = $this->daily_class_service->get_toy_daily_class($toy_id);
+
         // 获取课程列表
-        $this->load->service('study/class_service');
-        $class_list = $this->class_service->get_class_list();
+        $class_list = $this->daily_class_service->get_class_list($choosen_class_list);
 
         // 获取课程类型map
+        $this->load->service('study/class_service');
         $class_type_map = $this->class_service->get_class_key_v_map();
 
-
         $this->assign('class_list', $class_list);
+        $this->assign('choosen_class_list', $choosen_class_list);
         $this->assign('class_type_map', $class_type_map);
         $this->assign('toy_detail', $toy_detail);
 
@@ -55,12 +59,19 @@ class index extends Admin_Controller{
 
 
     /**
-     * 设置课程
+     * 设置每日课程
      */
     public function _set_class_post()
     {
+        // 获取参数
         $params = $this->input->post();
-        print_r($params);exit;
+
+        // 添加每日课程
+        $this->load->service('user_toy/daily_class_service');
+        $toy_id = $params['toy_id'];
+        $class_ids = $params['class_ids'];
+        $this->daily_class_service->batch_add_daily_class($toy_id, $class_ids);
+
     }
 
 } 

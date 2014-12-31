@@ -13,24 +13,29 @@ define(function(require, exports, module) {
             data: params,
             dataType: "json",
             success: function(data){
-//                alert('成功');
-//                window.location.href = '/story/index/home';
+                alert('成功');
+                window.location.reload();
             }
         });
     });
 
     function serialize()
     {
-        var data = {};
+        var classIds = {};
         $('#class_list_table').find(':checkbox').each(function(index) {
             if($(this).attr('checked'))
             {
                 var classId = $(this).attr('data-class_id');
-                data[index] = classId;
+                classIds[index] = classId;
             }
         });
 
-        return data;
+        var param = {};
+        param['toy_id'] = $('#toy_id').val();
+        param['class_ids'] = classIds;
+
+
+        return param;
     }
 
 });

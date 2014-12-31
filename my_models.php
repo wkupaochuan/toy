@@ -16,6 +16,8 @@
  * @property poetry_model       $poetry_model
  * @property user_toy_model     $user_toy_model
  *
+ * @property daily_class_model  $daily_class_model
+ *
  *
  *
  */

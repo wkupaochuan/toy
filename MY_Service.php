@@ -75,6 +75,7 @@
  * @property story_service                          $story_service
  * @property class_service                          $class_service
  * @property user_toy_service                          $user_toy_service
+ * @property daily_class_service                        $daily_class_service
  *
  *
 

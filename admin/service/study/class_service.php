@@ -65,6 +65,24 @@ class Class_service extends MY_Service{
 
 
     /**
+     * 根据id列表获取课程列表
+     * @param $class_ids
+     * @return null
+     */
+    public function get_class_list_by_ids($class_ids)
+    {
+        $class_list = $this->class_model->get_class_list_by_ids($class_ids);
+        foreach($class_list as & $record)
+        {
+            $record['class_cover_path'] =
+                empty($record['class_cover_path'])? '':TOY_ADMIN_URL . $record['class_cover_path'];
+
+        }
+        return $class_list;
+    }
+
+
+    /**
      * 获取课程详情
      * @param $class_id
      * @return null
@@ -80,7 +98,10 @@ class Class_service extends MY_Service{
     }
 
 
-
+    /**
+     * 新增诗句
+     * @param $data
+     */
     public function batch_add_poetrys($data)
     {
         $this->load->model('study/poetry_model');
