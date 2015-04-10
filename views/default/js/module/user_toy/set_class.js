@@ -34,7 +34,6 @@ define(function(require, exports, module) {
         param['toy_id'] = $('#toy_id').val();
         param['class_ids'] = classIds;
 
-
         return param;
     }
 

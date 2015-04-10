@@ -48,7 +48,7 @@ abstract class Admin_Controller extends CI_Controller
 	{
 		if ( ! $this->session->userdata('uid'))
 		{
-			//redirect(setting('backend_access_point') . '/login');
+			redirect(setting('backend_access_point') . '/login');
 		}
 		else
 		{

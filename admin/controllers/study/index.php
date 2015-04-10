@@ -105,9 +105,89 @@ class Index  extends  Admin_Controller{
     }
 
 
+    /**
+     * 添加英文单词卡页面
+     */
+    public function add_eng_word_page()
+    {
+        $this->display('study/add_class_eng_words.php');
+    }
+
+
+
+    /**
+     * 上传英文单词卡音频
+     */
+    public function _upload_eng_word_voice_post()
+    {
+        $file = $this->_handle_upload_file('eng_words/voice');
+
+        echo $file;
+    }
+
+
+    /**
+     * 上传英文单词卡图片
+     */
+    public function _upload_eng_word_image_post()
+    {
+        $file = $this->_handle_upload_file('eng_words/image');
+
+        echo $file;
+    }
+
+
+    /**
+     * 新增英文单词卡
+     */
+    public function _add_eng_word_post()
+    {
+        $array_params = $this->input->post();
+        $this->load->service('study/eng_word_service');
+        $this->eng_word_service->add_word($array_params);
+    }
+
 
 
 /**********************************private method*****************************************************************/
 
+
+    /**
+     * 处理上传文件
+     * @param $target_dir
+     * @return string
+     */
+    private function _handle_upload_file($target_dir)
+    {
+
+        $uploadedFileData = $_FILES['Filedata'];
+
+        $tempFile = $uploadedFileData['tmp_name'];
+
+        // Define a destination
+        $targetPath = $_SERVER['DOCUMENT_ROOT'] . '/upload_files/'.$target_dir;
+        $targetFileName = time().'.'.pathinfo($uploadedFileData['name'], PATHINFO_EXTENSION);
+        $targetFile = $targetPath. '/' .$targetFileName;
+
+        // 移动文件到目的目录
+        if(!file_exists($targetFile))
+        {
+            $this->_makesure_output_folder($targetPath);
+            move_uploaded_file($tempFile,$targetFile);
+        }
+
+        return 'upload_files/' . $target_dir . '/' .$targetFileName;
+    }
+
+
+
+    private function _makesure_output_folder($folder)
+    {
+        if (!is_dir($folder)) {
+            if (!mkdir($folder, 0777, TRUE)) {
+                throw new Exception('Failed to create folder: ' . $folder);
+            }
+        }
+    }
 
 } 
