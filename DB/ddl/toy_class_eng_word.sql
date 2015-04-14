@@ -1,0 +1,10 @@
+DROP TABLE
+IF EXISTS `toy_class_eng_word`;
+
+CREATE TABLE `toy_class_eng_word` (
+	id INT (11) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`image` VARCHAR (300) NOT NULL DEFAULT '' COMMENT '单词卡图片路径',
+	`voice` VARCHAR (300) NOT NULL DEFAULT '' COMMENT '单词卡音频路径',
+	`chinese` VARCHAR (300) NOT NULL DEFAULT '' COMMENT '单词卡中文释义',
+	`eng` VARCHAR (300) NOT NULL DEFAULT '' COMMENT '单词卡英文单词'
+) ENGINE = INNODB DEFAULT CHARSET = utf8 COLLATE = utf8_unicode_ci COMMENT '课程:英文单词';
