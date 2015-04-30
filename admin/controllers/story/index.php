@@ -104,16 +104,16 @@ class Index extends  Admin_Controller{
     {
         $array_params = $this->input->post();
 
-        print_r($array_params);exit;
+        $this->rest_success($array_params);
 
-        $array_new_story = array(
-            'name' => $array_params['story_title']
-            , 'story_cover_path' => $array_params['story_cover']
-            , 'path' => $array_params['story_mp3']
-        );
-
-        $res = $this->story_service->add_new_story($array_new_story);
-        print_r($res);
+//        $array_new_story = array(
+//            'name' => $array_params['story_title']
+//            , 'story_cover_path' => $array_params['story_cover']
+//            , 'path' => $array_params['story_mp3']
+//        );
+//
+//        $res = $this->story_service->add_new_story($array_new_story);
+//        print_r($res);
     }
 
 

@@ -19,9 +19,11 @@
                 'lib': '/views/default/js/lib'
             }
             , alias: {
-                "jquery" : 'lib/jquery/1.8.2/jquery.js'
-                , "rest" : 'lib/rest/rest_cmd.js'
-                , "validate" : 'lib/validate/validate_jquery_ext_cmd.js'
+                jquery : 'lib/jquery/1.8.2/jquery.js'
+                , rest : 'lib/rest/rest_cmd.js'
+                , validate : 'lib/validate/validate_jquery_ext_cmd.js'
+                , plupload_full: 'lib/plupload/plupload.full.js'
+                , plupload: 'lib/plupload/plupload_cmd.js'
             }
             , debug: true
         });

@@ -106,7 +106,7 @@ class resources_path {
         }
 
         return  array(
-            'file_path' => $targetFile
+            'filename' => $targetFile
             , 'url' => $this->get_resource_path($targetFile)
         );
     }

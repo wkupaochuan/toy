@@ -162,7 +162,7 @@ abstract class Admin_Controller extends CI_Controller
     public function rest_success($data, $msg = '')
     {
         $rest_data = array(
-            'error_code' => $this->config->my_item('toy/error_code', 'success')
+            'code' => $this->config->my_item('toy/error_code', 'success')
             , 'data' => $data
             , 'msg' => $msg
         );
@@ -181,8 +181,8 @@ abstract class Admin_Controller extends CI_Controller
      */
     public function rest_fail($msg, $error_code = NULL){
         $rest_data = array(
-            'error_code' => empty($error_code)? $this->config->my_item('toy/app_error_code', 'fail'):$error_code
-        , 'msg' => $msg
+            'code' => empty($error_code)? $this->config->my_item('toy/app_error_code', 'fail'):$error_code
+            , 'msg' => $msg
         );
         echo json_encode($rest_data);
         exit();

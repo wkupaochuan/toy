@@ -3,8 +3,10 @@ define(function(require, exports, module) {
 
     require('validate');
     require('rest');
+    require('plupload');
 
     processValidate();
+    processUploadAvatar('');
 
 
     /**
@@ -32,11 +34,14 @@ define(function(require, exports, module) {
         var request = $.restPost('/story/index/add_new_story', params);
 
         request.done(function(msg, data) {
+            var x = 12;
+            alert(data.story_title);
 //            W.message('操作成功！', 'success', function(){
 //            });
         });
 
         request.fail(function(msg) {
+            alert(33);
 //            W.alert(msg, 'error');
         });
 
@@ -54,21 +59,21 @@ define(function(require, exports, module) {
     });
 
 
-    $('#upload_story_cover').uploadify({
-        'auto'     : true,
-        'multi'    : false,//是否多文件上传
-        'fileTypeExts': '*.jpg; *.png',//可上传的文件类型
-        'buttonText' : '选择图片', //通过文字替换钮扣上的文字
-        'swf'      : 'js/uploadify/uploadify.swf', // 需要的flash
-        'uploader' : '/story/index/upload_story_cover',            // 处理上传的后端程序
-        'onUploadSuccess' : function(file, data, response) {
-//            alert('上传成功');
-//            getResult(data);//获得上传的文件路径
-            var xx = data;
-
-            $('.js_story_cover').attr("src", data.data.url);
-        }
-    });
+//    $('#upload_story_cover').uploadify({
+//        'auto'     : true,
+//        'multi'    : false,//是否多文件上传
+//        'fileTypeExts': '*.jpg; *.png',//可上传的文件类型
+//        'buttonText' : '选择图片', //通过文字替换钮扣上的文字
+//        'swf'      : 'js/uploadify/uploadify.swf', // 需要的flash
+//        'uploader' : '/story/index/upload_story_cover',            // 处理上传的后端程序
+//        'onUploadSuccess' : function(file, data, response) {
+////            alert('上传成功');
+////            getResult(data);//获得上传的文件路径
+//            var xx = data;
+//
+//            $('.js_story_cover').attr("src", data.data.url);
+//        }
+//    });
 
 
     $('#upload_story_mp3').uploadify({
@@ -92,6 +97,41 @@ define(function(require, exports, module) {
     function getResult(file_path){
         //通过上传的图片来动态生成text来保存路径
         $('#story_cover').val(file_path);
-
     }
+
+
+    /**
+     * 上传图片
+     * @param path
+     */
+    function processUploadAvatar
+        (path) {
+        var uploader = $('#upload_story_cover').plupload({
+            upload_limit: 1,
+            max_file_size : '5mb',
+            url:'/story/index/upload_story_cover',
+            onitemappend: function(up, $list, $item, filepath) {
+                $item.find('.js_link').fancybox();
+
+                $item.find('img').imageScale({
+                    height: 70,
+                    width: 70
+                });
+            },
+            onitemschange: function (up, $list) {
+                var items = uploader.getItems();
+                if (items.length) {
+                    $('#faceUrl').val(items[0].path);
+                } else {
+                    $('#faceUrl').val('');
+                }
+            }
+        });
+
+        if (path) {
+            uploader.addItem(path);
+        }
+    }
+
+
 });

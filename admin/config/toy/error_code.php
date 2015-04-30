@@ -6,7 +6,7 @@
 
 $config = array(
     // 请求成功
-    'success' => 900
+    'success' => 1000
     // 请求失败
     , 'fail'  => 901
     // 登陆失败
