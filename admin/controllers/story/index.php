@@ -49,19 +49,22 @@ class Index extends  Admin_Controller{
      */
     public function _upload_story_cover_post()
     {
-        $uploadedFileData = $_FILES['Filedata'];
+        $res = $this->resources_path->upload_story_cover();
 
-        $tempFile = $uploadedFileData['tmp_name'];
-
-        // Define a destination
-        $targetPath = $_SERVER['DOCUMENT_ROOT'] . MP3_FILE_DIR;
-        $targetFileName = time().'.'.pathinfo($uploadedFileData['name'], PATHINFO_EXTENSION);
-        $targetFile = $targetPath. '/' .$targetFileName;
-
-        // 移动文件到目的目录
-        $this->moveFile($tempFile,$targetFile);
-
-        echo MP3_FILE_DIR.'/'.$targetFileName;
+        $this->rest_success($res);
+//        $uploadedFileData = $_FILES['Filedata'];
+//
+//        $tempFile = $uploadedFileData['tmp_name'];
+//
+//        // Define a destination
+//        $targetPath = $_SERVER['DOCUMENT_ROOT'] . MP3_FILE_DIR;
+//        $targetFileName = time().'.'.pathinfo($uploadedFileData['name'], PATHINFO_EXTENSION);
+//        $targetFile = $targetPath. '/' .$targetFileName;
+//
+//        // 移动文件到目的目录
+//        $this->moveFile($tempFile,$targetFile);
+//
+//        echo MP3_FILE_DIR.'/'.$targetFileName;
     }
 
 
@@ -100,6 +103,8 @@ class Index extends  Admin_Controller{
     public function _add_new_story_post()
     {
         $array_params = $this->input->post();
+
+        print_r($array_params);exit;
 
         $array_new_story = array(
             'name' => $array_params['story_title']

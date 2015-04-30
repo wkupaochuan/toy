@@ -13,12 +13,17 @@
 <link rel="stylesheet" type="text/css" href="js/uploadify/uploadify.css">
     <script type='text/javascript'>
         seajs.config({
-            alias: {
-                "jquery": "jquery/1.8.2/jquery.js"
-            },
-            base: '/views/default/js/module',
-            charset: 'utf-8'
-
+            base: '/views/default/js/module'
+            , charset: 'utf-8'
+            , paths: {
+                'lib': '/views/default/js/lib'
+            }
+            , alias: {
+                "jquery" : 'lib/jquery/1.8.2/jquery.js'
+                , "rest" : 'lib/rest/rest_cmd.js'
+                , "validate" : 'lib/validate/validate_jquery_ext_cmd.js'
+            }
+            , debug: true
         });
 
         seajs.use('default/default_table', function(detail){
@@ -46,13 +51,6 @@
             当前身份 <label class='bold'>{$admin_role_name}</label></span>
         </p>
 	</div>
-    <!--
-	<div id="info_bar">
-        <span class="nav_sec">
-            {$trigger_navigation}
-        </span>
-    </div>
-    -->
 	<div id="admin_left">
 		<ul class="submenu">
             {$system_left_menus}

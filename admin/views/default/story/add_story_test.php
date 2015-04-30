@@ -6,10 +6,12 @@
     <div class="content form_content">
         <form id="story_form">
             <table class="gridtable">
-                <tr>
+                <tr class="validate_item">
                     <th>故事名称</th>
                     <td>
                         <input type="text" name="story_title" id="story_title">
+                        <label class="validate_success_ico"></label>
+                        <label class="validate_error"></label>
                     </td>
                 </tr>
 
@@ -18,6 +20,7 @@
                     <td>
                         <input type="file" name="upload_story_cover" id="upload_story_cover" />
                         <input type="hidden" name="story_cover" id="story_cover" />
+                        <img src="" class="js_story_cover"/>
                     </td>
                 </tr>
 
