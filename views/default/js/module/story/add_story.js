@@ -18,13 +18,19 @@ define(function(require, exports, module) {
      * 提交故事
      * */
     $('#submit').click(function (){
+
+        if(!submitCheck())
+        {
+            return ;
+        }
+
         var params = $('#story_form').serialize();
 
         var request = $.restPost('/story/index/add_new_story', params);
 
         request.done(function(msg, data) {
-            W.message('操作成功！', 'success', function(){
-            });
+//            W.message('操作成功！', 'success', function(){
+//            });
         });
 
         request.fail(function(msg) {
@@ -35,6 +41,21 @@ define(function(require, exports, module) {
 
 
     /**
+     * 提交前校验
+     * @returns {boolean}
+     */
+    function submitCheck()
+    {
+        var valid = true;
+//        if (!processValidate()) {
+//            valid = false;
+//        }
+
+        return valid;
+    }
+
+
+    /**
      * 上传故事声音
      * @param path
      */
@@ -42,7 +63,7 @@ define(function(require, exports, module) {
         var uploader = $('#upload_story_voice').plupload({
             upload_limit: 1,
             max_file_size : '5mb',
-            url:'/story/index/upload_story_mp3',
+            url:'/story/index/upload_story_voice',
             filters: [
                 {title: "Image files", extensions: "mp3"}
             ],
@@ -57,9 +78,9 @@ define(function(require, exports, module) {
             onitemschange: function (up, $list) {
                 var items = uploader.getItems();
                 if (items.length) {
-                    $('#story_mp3').val(items[0].path);
+                    $('#story_voice').val(items[0].path);
                 } else {
-                    $('#story_mp3').val('');
+                    $('#story_voice').val('');
                 }
             }
         });
@@ -111,6 +132,14 @@ define(function(require, exports, module) {
             fields:[{
                 name: 'story_title',
                 display: '故事名称',
+                rules: 'required'
+            },{
+                name: 'story_cover',
+                display: '故事封面',
+                rules: 'required'
+            },{
+                name: 'story_voice',
+                display: '故事音频',
                 rules: 'required'
             }
             ]

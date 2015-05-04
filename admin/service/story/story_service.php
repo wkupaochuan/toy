@@ -39,7 +39,7 @@ class Story_service extends MY_Service{
      */
     public function add_new_story($new_story)
     {
-        return $this->story_model->add_new_story($new_story);
+        return $this->story_model->insert($new_story);
     }
 
 

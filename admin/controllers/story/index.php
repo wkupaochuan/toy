@@ -58,49 +58,29 @@ class Index extends  Admin_Controller{
     /**
      * 上传故事音频文件
      */
-    public function _upload_story_mp3_post()
+    public function _upload_story_voice_post()
     {
-        $uploadedFileData = $_FILES['Filedata'];
+        $res = $this->resources_path->upload_story_voice();
 
-        $tempFile = $uploadedFileData['tmp_name'];
-
-        // Define a destination
-        $targetPath = $_SERVER['DOCUMENT_ROOT'] . MP3_FILE_DIR;
-        $targetFileName = time().'.'.pathinfo($uploadedFileData['name'], PATHINFO_EXTENSION);
-        $targetFile = $targetPath. '/' .$targetFileName;
-
-        // 移动文件到目的目录
-        $this->moveFile($tempFile,$targetFile);
-
-        echo MP3_FILE_DIR.'/'.$targetFileName;
+        $this->rest_success($res);
     }
-
-    public function moveFile($tempFile,$targetFile)
-    {
-        if(!file_exists($targetFile))
-        {
-            move_uploaded_file($tempFile,$targetFile);
-        }
-    }
-
 
     /**
      * 新加故事
      */
     public function _add_new_story_post()
     {
-        $array_params = $this->input->post();
+        $array_params = $this->input->get_params();
 
-        $this->rest_success($array_params);
+        $array_new_story = array(
+            'story_title' => $array_params['story_title']
+            , 'story_cover' => $array_params['story_cover']
+            , 'story_voice' => $array_params['story_voice']
+        );
 
-//        $array_new_story = array(
-//            'name' => $array_params['story_title']
-//            , 'story_cover_path' => $array_params['story_cover']
-//            , 'path' => $array_params['story_mp3']
-//        );
-//
-//        $res = $this->story_service->add_new_story($array_new_story);
-//        print_r($res);
+        $res = $this->story_service->add_new_story($array_new_story);
+
+        $this->rest_success($res);
     }
 
 

@@ -60,13 +60,13 @@ EOD;
 
 
     /**
-     * 新增故事
-     * @param $new_story array('name'=>, 'story_cover_path' =>, 'path'=> )
+     * 新增
+     * @param $story
      * @return mixed
      */
-    public function add_new_story($new_story)
+    public function insert($story)
     {
-        $this->db->insert($this->_table_name, $new_story);
+        $this->db->insert($this->_table_name, $story);
         return $this->db->insert_id();
     }
 

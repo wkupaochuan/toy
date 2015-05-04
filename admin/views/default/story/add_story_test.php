@@ -15,7 +15,7 @@
                     </td>
                 </tr>
 
-                <tr>
+                <tr class="validate_item">
                     <th>故事封面</th>
                     <td>
                         <div id="upload_story_cover">
@@ -29,16 +29,18 @@
                             <p class="validateItem">
                                 <label for="" class="validateTips">
                                     图片格式必须为以下格式：jpeg, jpg, gif, png <br/>
-                                    图片大小不可大于2M
+                                    图片大小不可大于5M
                                 </label>
                                 <label for="" class="validateErrorLabel"></label>
                             </p>
                         </div>
                         <input type="hidden" name="story_cover" id="story_cover" />
+                        <label class="validate_success_ico"></label>
+                        <label class="validate_error"></label>
                     </td>
                 </tr>
 
-                <tr>
+                <tr class="validate_item">
                     <th>故事音频</th>
                     <td>
                         <div id="upload_story_voice">
@@ -51,13 +53,15 @@
                             </div>
                             <p class="validateItem">
                                 <label for="" class="validateTips">
-                                    图片格式必须为以下格式：jpeg, jpg, gif, png <br/>
-                                    图片大小不可大于2M
+                                    音频格式必须为以下格式：mp3 <br/>
+                                    音频大小不可大于5M
                                 </label>
                                 <label for="" class="validateErrorLabel"></label>
                             </p>
                         </div>
-                        <input type="hidden" name="story_mp3" id="story_mp3" />
+                        <input type="hidden" name="story_voice" id="story_voice" />
+                        <label class="validate_success_ico"></label>
+                        <label class="validate_error"></label>
                     </td>
                 </tr>
 
