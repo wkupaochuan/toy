@@ -24,6 +24,8 @@
                 , validate : 'lib/validate/validate_jquery_ext_cmd.js'
                 , plupload_full: 'lib/plupload/plupload.full.js'
                 , plupload: 'lib/plupload/plupload_cmd.js'
+                , fancybox: 'lib/fancybox/fancybox_cmd.js'
+                , image_scale: 'lib/image_scale/image_scale_cmd.js'
             }
             , debug: true
         });

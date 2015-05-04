@@ -52,19 +52,6 @@ class Index extends  Admin_Controller{
         $res = $this->resources_path->upload_story_cover();
 
         $this->rest_success($res);
-//        $uploadedFileData = $_FILES['Filedata'];
-//
-//        $tempFile = $uploadedFileData['tmp_name'];
-//
-//        // Define a destination
-//        $targetPath = $_SERVER['DOCUMENT_ROOT'] . MP3_FILE_DIR;
-//        $targetFileName = time().'.'.pathinfo($uploadedFileData['name'], PATHINFO_EXTENSION);
-//        $targetFile = $targetPath. '/' .$targetFileName;
-//
-//        // 移动文件到目的目录
-//        $this->moveFile($tempFile,$targetFile);
-//
-//        echo MP3_FILE_DIR.'/'.$targetFileName;
     }
 
 

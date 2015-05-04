@@ -4,9 +4,102 @@ define(function(require, exports, module) {
     require('validate');
     require('rest');
     require('plupload');
+    require('fancybox');
+    require('image_scale');
+    require('lib/xiaomili/xiaomili.util.js');
+
 
     processValidate();
-    processUploadAvatar('');
+    processUploadStoryCover('');
+    processUploadStoryVoice();
+
+
+    /**
+     * 提交故事
+     * */
+    $('#submit').click(function (){
+        var params = $('#story_form').serialize();
+
+        var request = $.restPost('/story/index/add_new_story', params);
+
+        request.done(function(msg, data) {
+            W.message('操作成功！', 'success', function(){
+            });
+        });
+
+        request.fail(function(msg) {
+            W.alert(msg, 'error');
+        });
+
+    });
+
+
+    /**
+     * 上传故事声音
+     * @param path
+     */
+    function processUploadStoryVoice() {
+        var uploader = $('#upload_story_voice').plupload({
+            upload_limit: 1,
+            max_file_size : '5mb',
+            url:'/story/index/upload_story_mp3',
+            filters: [
+                {title: "Image files", extensions: "mp3"}
+            ],
+            onitemappend: function(up, $list, $item, filepath) {
+                $item.find('.js_link').fancybox();
+
+                $item.find('img').imageScale({
+                    height: 70,
+                    width: 70
+                });
+            },
+            onitemschange: function (up, $list) {
+                var items = uploader.getItems();
+                if (items.length) {
+                    $('#story_mp3').val(items[0].path);
+                } else {
+                    $('#story_mp3').val('');
+                }
+            }
+        });
+    }
+
+
+    /**
+     * 上传故事封面
+     * @param path
+     */
+    function processUploadStoryCover(path) {
+        var uploader = $('#upload_story_cover').plupload({
+            upload_limit: 1,
+            max_file_size : '5mb',
+            url:'/story/index/upload_story_cover',
+            filters: [
+                {title: "Image files", extensions: "jpg,png,jpeg,gif"}
+            ],
+            onitemappend: function(up, $list, $item, filepath) {
+                $item.find('.js_link').fancybox();
+
+                $item.find('img').imageScale({
+                    height: 70,
+                    width: 70
+                });
+            },
+            onitemschange: function (up, $list) {
+                var items = uploader.getItems();
+                if (items.length) {
+                    $('#story_cover').val(items[0].path);
+                } else {
+                    $('#story_cover').val('');
+                }
+            }
+        });
+
+        if (path) {
+            uploader.addItem(path);
+        }
+    }
 
 
     /**
@@ -22,115 +115,6 @@ define(function(require, exports, module) {
             }
             ]
         });
-    }
-
-
-    /**
-     * 提交故事
-     * */
-    $('#submit').click(function (){
-        var params = $('#story_form').serialize();
-
-        var request = $.restPost('/story/index/add_new_story', params);
-
-        request.done(function(msg, data) {
-            var x = 12;
-            alert(data.story_title);
-//            W.message('操作成功！', 'success', function(){
-//            });
-        });
-
-        request.fail(function(msg) {
-            alert(33);
-//            W.alert(msg, 'error');
-        });
-
-
-//        $.ajax({
-//            type: "POST",
-//            url: "/story/index/add_new_story",
-//            data: params,
-//            dataType: "json",
-//            success: function(data){
-//                alert('成功');
-//                window.location.href = '/story/index/home';
-//            }
-//        });
-    });
-
-
-//    $('#upload_story_cover').uploadify({
-//        'auto'     : true,
-//        'multi'    : false,//是否多文件上传
-//        'fileTypeExts': '*.jpg; *.png',//可上传的文件类型
-//        'buttonText' : '选择图片', //通过文字替换钮扣上的文字
-//        'swf'      : 'js/uploadify/uploadify.swf', // 需要的flash
-//        'uploader' : '/story/index/upload_story_cover',            // 处理上传的后端程序
-//        'onUploadSuccess' : function(file, data, response) {
-////            alert('上传成功');
-////            getResult(data);//获得上传的文件路径
-//            var xx = data;
-//
-//            $('.js_story_cover').attr("src", data.data.url);
-//        }
-//    });
-
-
-    $('#upload_story_mp3').uploadify({
-        'auto'     : true,
-        'multi'    : false,//是否多文件上传
-        'fileTypeExts': '*.mp3',//可上传的文件类型
-        'buttonText' : '选择故事', //通过文字替换钮扣上的文字
-        'swf'      : 'js/uploadify/uploadify.swf', // 需要的flash
-        'uploader' : '/story/index/upload_story_mp3',            // 处理上传的后端程序
-        'onUploadSuccess' : function(file, data, response) {
-            alert('上传成功');
-            $('#story_mp3').val(data);
-        }
-    });
-
-
-    /**
-     * 给隐藏的路径赋值
-     * @param file_path
-     */
-    function getResult(file_path){
-        //通过上传的图片来动态生成text来保存路径
-        $('#story_cover').val(file_path);
-    }
-
-
-    /**
-     * 上传图片
-     * @param path
-     */
-    function processUploadAvatar
-        (path) {
-        var uploader = $('#upload_story_cover').plupload({
-            upload_limit: 1,
-            max_file_size : '5mb',
-            url:'/story/index/upload_story_cover',
-            onitemappend: function(up, $list, $item, filepath) {
-                $item.find('.js_link').fancybox();
-
-                $item.find('img').imageScale({
-                    height: 70,
-                    width: 70
-                });
-            },
-            onitemschange: function (up, $list) {
-                var items = uploader.getItems();
-                if (items.length) {
-                    $('#faceUrl').val(items[0].path);
-                } else {
-                    $('#faceUrl').val('');
-                }
-            }
-        });
-
-        if (path) {
-            uploader.addItem(path);
-        }
     }
 
 
