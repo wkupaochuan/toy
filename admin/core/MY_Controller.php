@@ -93,7 +93,8 @@ abstract class Admin_Controller extends CI_Controller
      */
     public function display($html) {
         $this->cismarty->assign('backend_title',setting('backend_title'));
-        $this->cismarty->assign('base_url', base_url().'views/'.setting('backend_theme').'/');
+//        $this->cismarty->assign('base_url', base_url().'views/'.setting('backend_theme').'/');
+        $this->cismarty->assign('base_url', base_url().'public/');
         $this->cismarty->assign('backend_logo', setting('backend_logo'));
         $this->cismarty->assign('top_menus', $this->acl->show_top_menus());
         $this->cismarty->assign('quit_url', backend_url('login/quit'));

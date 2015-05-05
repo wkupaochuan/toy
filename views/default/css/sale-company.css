@@ -1,9 +1,0 @@
-@CHARSET "UTF-8";
-#form_addcompanyinfo {width:1000px;margin:0 auto}
-#form_addcompanyinfo dt{float:left;width:120px;text-align:right;height:30px;line-height:30px;}
-#form_addcompanyinfo dd{float:left;width:350px;line-height:30px;}
-#form_addcompanyinfo dd.data select{width:300px;}
-#form_addcompanyinfo dd.data input{width:300px;}
-#form_addcompanyinfo dd.data textarea{width:300px;}
-#form_addcompanyinfo #contact_cell_phone {width:100px;}
-#save{width:60px;}

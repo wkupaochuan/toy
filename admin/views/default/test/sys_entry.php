@@ -7,18 +7,16 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <!--css begin-->
-    <link rel="stylesheet" href="css/admin.css" />
-    <link rel="stylesheet" href="css/custom.css" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="style/css/admin.css" />
     <link rel="stylesheet" href="style/module_common/all.css"/>
     <link rel="stylesheet" href="style/lib/fancybox/jquery.fancybox.css"/>
     <link rel="stylesheet" href="style/lib/plupload/uploadimages.css"/>
     <link rel="stylesheet" href="style/lib/calendar/jscal2.css" type="text/css"/>
     <link rel="stylesheet" href="style/lib/jqueryui/redmond/jquery-ui-1.10.2.css"/>
-    <link rel="stylesheet" href="style/css/base.css?v=1406254416978">
-    <link rel="stylesheet" href="style/css/common.css?v=1406254416978">
-    <link rel="stylesheet" href="style/lib/cmp_all.css?v=20140221"/>
-    <link rel="stylesheet" href="style/module_common/all.css?v=2014072916"/>
+    <link rel="stylesheet" href="style/css/base.css">
+    <link rel="stylesheet" href="style/css/common.css">
+    <link rel="stylesheet" href="style/lib/cmp_all.css"/>
+    <link rel="stylesheet" href="style/module_common/all.css"/>
     <link rel="stylesheet" href="style/module/pages.css" type="text/css" />
 <!--css end-->
 
@@ -27,10 +25,10 @@
 <script type="text/javascript" src="js/jquery.js"></script>
     <script type='text/javascript'>
         seajs.config({
-            base: '/views/default/js/module'
+            base: '/public/js/module'
             , charset: 'utf-8'
             , paths: {
-                'lib': '/views/default/js/lib'
+                'lib': '/public/js/lib'
             }
             , alias: {
                 jquery : 'lib/jquery/1.8.2/jquery.js'
