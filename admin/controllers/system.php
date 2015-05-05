@@ -47,7 +47,8 @@ class System extends Admin_Controller
      */
 	public function home()
 	{
-		$this->_template('sys_default');
+//		$this->_template('sys_default');
+        $this->display('sys_default.php');
 	}
 	
 	// ------------------------------------------------------------------------
