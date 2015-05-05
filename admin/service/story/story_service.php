@@ -2,6 +2,9 @@
 
 class Story_service extends MY_Service{
 
+
+    /************************************************************* public methods **********************************************************************************/
+
     public function __construct()
     {
         parent::__construct();
@@ -19,6 +22,16 @@ class Story_service extends MY_Service{
     {
         $array_story_list = $this->story_model->get($condition, $limit, $offset);
         return $array_story_list;
+    }
+
+    /**
+     * 获取故事列表
+     * @param $condition
+     * @return mixed
+     */
+    public function get_story_count($condition)
+    {
+        return $this->story_model->count($condition);
     }
 
 
@@ -43,6 +56,26 @@ class Story_service extends MY_Service{
     {
         return $this->story_model->insert($new_story);
     }
+
+
+    /**
+     * 删除故事
+     * @param $story_id
+     */
+    public function del_story($story_id)
+    {
+        $new_story = array(
+            'is_deleted' => 1
+        );
+        $where = array(
+            'story_id' => $story_id
+        );
+        return $this->story_model->update($new_story, $where);
+    }
+
+
+
+    /************************************************************* private methods **********************************************************************************/
 
 
 }
