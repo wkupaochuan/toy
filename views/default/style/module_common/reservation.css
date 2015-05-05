@@ -1,0 +1,364 @@
+p.order_notice{
+    border:1px solid #fadfb2;
+    background: #feffef;
+    line-height: 36px;
+    padding-left: 10px;
+}
+.reservationTable td{
+}
+.reservationList{
+    overflow-y: hidden;
+}
+.reservation_normalTable{
+    margin-bottom: 10px;
+}
+.reservation_normalTable td{
+    padding-top:3px;
+    padding-bottom: 3px;
+}
+.reservation_h2{
+    color: #369be9;
+    overflow: hidden;
+    font-size: 16px;
+    border-bottom: 2px solid #359aea;
+    font-weight: normal;
+    line-height: 30px;
+    margin-top:15px;
+    margin-bottom: 10px;
+    background: url("images/ico_reservation.gif") no-repeat 0px 5px;
+    padding-left: 18px;
+    height: 30px;
+}
+.reservation_h2 a{
+    color:#2d475b;
+    font-size: 12px;
+    display: inline-block;
+    padding-left:18px
+}
+.reservation_h2 a.up{
+    background: url("images/ico_reservation.gif") no-repeat 7px -30px;
+}
+.reservation_h2 a.down{
+    background: url("images/ico_reservation.gif") no-repeat 2px -65px;
+}
+.reservation_h2Orderlist{
+    background: url("images/ico_reservation.gif") no-repeat 2px -94px;
+    border-bottom: none;
+    margin-bottom: 0;
+}
+.reservation_h2 span.text_highlight{
+    font-size: 12px;
+}
+.reservation_h2 b{
+    font-weight: normal;
+    font-size: 12px;
+    color: #2d475b;
+}
+.reservationHeader_oper_small{
+    width:68px;
+    float: left;
+    text-align: center;
+}
+.reservationHeader_oper_small .headerOperate{
+    border: none;
+    width:68px;
+}
+
+/*填写预约订单*/
+.reservationOrders{
+}
+.reservationOrders_inner{
+    border-top: 1px solid #ddd;
+    overflow: hidden;
+}
+.reservationTable th{
+    background: none;
+    border:none;
+    text-align: right;
+    padding:5px 0px;
+}
+.reservationTable td{
+    padding:5px 0px;
+}
+
+.reservationLetter{
+    padding:0px 10px;
+}
+.reservation_header_normal,.reservation_header_large {
+    width: 282px;
+    margin-left: 10px;
+    margin-right: 10px;
+    line-height: 21px;
+}
+.reservation_header_large{
+    width: 556px;
+}
+.reservation_collapse{
+    display: inline-block;
+    background: url("images/userInfoIcon_v1.gif") no-repeat 0px -882px;
+    padding-left: 12px;
+}
+.reservation_drop{
+    display: inline-block;
+    background: url("images/userInfoIcon_v1.gif") no-repeat 0px -914px;
+    padding-left: 12px;
+}
+.copywriting_case{
+    border: 1px solid #ddd;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    width: 550px;
+    padding: 4px;
+    font-size: 12px;
+    line-height: 22px;
+    height: 130px;
+}
+.reservationTips{
+    line-height: 22px;
+}
+.reservationTips img{
+    vertical-align: -1px;
+    margin-left: 2px;
+}
+.reservation_operate_btn{
+    margin-top: 5px;
+}
+.case_complete_title01,.case_complete_title02{
+    padding:5px 10px 5px 10px;
+    display: inline-block;
+    margin-top:20px;
+    margin-bottom: 20px;
+}
+
+.case_complete_title01{
+    background: #258afe;
+    color: #fff;
+}
+.case_complete_title02{
+    background: #fff;
+    color: #3699ff;
+    border:1px solid #d8e1e6;
+    margin-left: 16px;
+}
+.case_complete_title01 img{
+    vertical-align: -6px;
+}
+.case_complete_title02 img{
+    vertical-align: -6px;
+}
+/*预约审核状态*/
+
+/*预约的订单状态*/
+.reservation_auditResults{
+    width:140px;
+    display:inline-block;
+    text-align:right;
+    font-weight: bold;
+}
+.reservation_order_table th{
+    background-color: #eff2f7;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    height: 15px;
+    line-height: 15px;
+}
+.reservation_orderStatus{
+    font-style: normal;
+}
+.reservation_orderStatus b{
+    display: inline-block;
+    width: 15px;
+    line-height: 15px;
+    text-align: center;
+    background: url("images/icon_sprites_v1.png");
+    color: #fff;
+    font-weight: normal;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.reservation_orderStatus b:first-child{
+    margin-left: 0px;
+}
+.reservation_orderStatus b.past{
+  background-position:0px -742px
+}
+.reservation_orderStatus b.now{
+    background-position:0px -782px
+}
+.reservation_orderStatus b.future{
+    background-position:0px -824px;
+    color: #647785;
+}
+.reservation_orderStatus span.col_past{
+    color:#b4d996;
+}
+.reservation_orderStatus span.col_now{
+    color:#4e9626;
+}
+.reservation_orderStatus span.col_future{
+    color:#405769;
+}
+.field_hidden{
+    display: none;
+}
+.tableContent td.clearPadding{
+    padding: 0;
+}
+/*预约订单 table title*/
+.reservation_tableTitle{
+    margin-bottom: 0;
+    border-left:1px solid #d0dae3;
+    border-right:1px solid #d0dae3;
+}
+.reservation_tableContent{
+    border-color: #d0dae3;
+}
+/*预约沟通详情-沟通执行细节*/
+.implementation_list_box{
+    margin-bottom: 12px;
+}
+.icon_implementation_details{
+    background-position: 0 -66px;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+.reservation_title_tips{
+    float: left;
+    margin: 17px 0 0 5px;
+}
+.implementation_details_input{
+    background-color: #edf0f5;
+    padding: 10px 15px;
+}
+.implementation_details_textarea{
+    display: block;
+    border: 1px solid #828282;
+    width: 1154px;
+    height: 84px;
+    resize:none;
+    color: #818181;
+    line-height: 20px;
+    padding: 8px;
+    margin-bottom:5px;
+}
+.implementation_input_tips{
+    width: 100%;
+    text-align: right;
+}
+.implementation_attachments{
+    overflow: hidden;
+    margin-top:8px;
+}
+.implementation_add_attachments{
+    float: left;
+    line-height: 20px;
+    background: none;
+    padding-left: 0;
+    font-size: 12px;
+}
+.implementation_attachments ul{
+    float: left;
+    overflow: hidden;
+    width: 1100px;
+}
+.implementation_attachments ul li{
+    float: left;
+    margin-left: 20px;
+    line-height: 20px;
+    white-space: nowrap;
+    list-style: none;
+}
+.implementation_attachments_name{
+    display: inline-block;
+    margin-right: 4px;
+    height: 26px;
+    line-height: 24px;
+    vertical-align: middle;
+    background: url(images/attachment_v2.png) no-repeat left 0;
+    padding-left:30px;
+    max-width: 124px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #333;
+}
+
+.implementation_attachments_name.attachment_type_img {
+    background: url(images/icon_attachment_pic.png) no-repeat left 2px;
+}
+
+.implementation_attachments_del{
+    display: inline-block;
+    height: 18px;
+    line-height: 18px;
+    vertical-align: middle;
+}
+.implementation_details_submit{
+    overflow: hidden;
+    margin-top: 5px;
+}
+.implementation_details_submit a{
+    vertical-align: bottom;
+}
+.implementation_details_submit span{
+    vertical-align: bottom;
+}
+.implementation_details_list{
+    margin: 16px 0 0 0px;
+    width: 1200px;
+}
+.implementation_details_list th,.implementation_details_list td{
+    border-bottom:1px dashed #ddd;
+    padding-top:12px;
+}
+.implementation_details_list th{
+    padding-left:10px
+}
+.implementation_details_list tr:last-child th,.implementation_details_list tr:last-child td{
+    border-bottom:none;
+}
+
+.implementation_details_list tr.shield {
+    background-color: #fee9dd;
+}
+
+.implementation_details_head{
+    margin-right: 8px;
+    width:46px;
+}
+.implementation_list_title{
+    font-size: 12px;
+    color: #f90;
+    font-weight: normal;
+}
+.implementation_list_txt{
+    line-height: 18px;
+    margin-top: 4px;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+.implementation_list_attachment{
+    margin: 5px 0;
+}
+.implementation_list_attachment span{
+    margin-right: 20px;
+}
+.implementation_list_date{
+    color: #818181;
+}
+.implementation_details{
+    width: 1200px;
+}
+.text_danger {
+    color:#f00;
+}
+
+.implementation_error_msg {
+    color: #f00;
+    padding: 8px 0;
+}

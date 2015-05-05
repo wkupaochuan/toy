@@ -1,0 +1,30 @@
+/** Container start-- **/
+.weiboyiTabCtnr, .weiboyiCtnr {
+  overflow: auto;
+}
+
+.weiboyiCtnrText {
+  color: #666666;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.weiboyiCtnr_loading, .weiboyiTabCtnr_loading {
+  background: url(images/common/loading.gif) no-repeat center center;
+  min-height: 80px;
+  _height: 80px;
+}
+
+.weiboyiTabCtnr_icon {
+  height: 18px;
+  width: 18px;
+  display: inline-block;
+}
+
+.weiboyiIframeContent {
+  overflow:auto;
+  width:100%;
+  height:100%;
+  border:none;
+  background-color: transparent;
+}

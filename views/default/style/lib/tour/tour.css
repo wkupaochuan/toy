@@ -1,0 +1,210 @@
+.tour_mask {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 1000px;
+    z-index: 40000;
+    display: none;
+}
+
+.tour_target {
+    box-shadow: 5px 5px 21px rgb(177, 131, 131);
+    z-index: 40000;
+}
+
+.tour_target_position {
+    position: relative;
+}
+
+.tour_mask_item {
+    background: #333333;
+    position: absolute;
+    opacity: 0.5;
+    filter: alpha(opacity=40);
+    z-index: 40000;
+
+    -webkit-transition: all 0.25s ease-out;
+    -moz-transition: all 0.25s ease-out;
+    -ms-transition: all 0.25s ease-out;
+    -o-transition: all 0.25s ease-out;
+    transition: all 0.25s ease-out;
+}
+
+.tour_mask_north {
+    top: 0;
+    width: 100%;
+}
+
+.tour_mask_south {
+    bottom: 0;
+    width: 100%;
+}
+
+.tour_mask_west {
+    left: 0;
+    height: 100%;
+}
+
+.tour_mask_east {
+    right: 0;
+    height: 100%;
+}
+
+
+.tour_mask_northeast {
+    top: 0;
+    right: 0;
+}
+
+.tour_mask_northwest {
+    top: 0;
+    left: 0;
+}
+
+.tour_mask_southwest {
+    left: 0;
+    bottom: 0;
+}
+
+.tour_mask_southeast {
+    right: 0;
+    bottom: 0;
+}
+
+.tour_tip {
+    position: absolute;
+
+    -webkit-transition: all 0.25s ease-out;
+    -moz-transition: all 0.25s ease-out;
+    -ms-transition: all 0.25s ease-out;
+    -o-transition: all 0.25s ease-out;
+    transition: all 0.25s ease-out;
+}
+
+.tour_tip .weiboyiTool_close {
+    display: none;
+}
+
+
+.tour_tip_tc {
+    background: url(images/tc.png) repeat-x left top;
+    padding-top: 18px;
+}
+
+.tour_tip_tl {
+    padding-left: 18px;
+    background: url(images/tl.png) no-repeat left top;
+    _background: url(images/tl.gif) no-repeat left top;
+}
+
+.tour_tip_tr {
+    padding-right: 17px;
+    background: url(images/tr.png) no-repeat right 0px;
+    _background: url(images/tr.gif) no-repeat right 0px;
+}
+
+.tour_tip_bl {
+    padding-left: 18px;
+    background: url(images/bl.png) no-repeat left bottom;
+    _background: url(images/bl.gif) no-repeat left bottom;
+}
+
+.tour_tip_br {
+    padding-right: 17px;
+    background: url(images/br.png) no-repeat right bottom;
+    _background: url(images/br.gif) no-repeat right bottom;
+    border-bottom-color:#99bbe8;
+}
+
+.tour_tip_bc {
+    background: url(images/bc.png) repeat-x left bottom #f3fbff;
+    padding-bottom: 4px;
+    _margin-top: -5px;
+    +zoom: 1;
+}
+
+
+.tour_tip_mc {
+    background-color: #f3fbff;
+}
+
+.tour_tip_ml {
+    padding-left: 18px;
+    background:url(images/ml.png)  repeat-y left top;
+}
+
+.tour_tip_mr {
+    padding-right: 17px;
+    background:url(images/mr.png) repeat-y right top;
+}
+
+.tour_tip_foot {
+    text-align: center;
+}
+
+.tour_tip_btn {
+    margin: 0px 15px 0 0;
+    cursor: pointer;
+}
+
+
+.tour_tip_anchor {
+    display: inline-block;
+    position: absolute;
+}
+
+.tour_tip_tc .tour_tip_anchor {
+    width: 63px;
+    height: 57px;
+    margin: -50px 0 0 20px;
+    top: -7px;
+    background: url("images/anchor_t.png") no-repeat left top transparent;
+    _background: url("images/anchor_t.gif") no-repeat left top transparent;
+}
+.tour_tip_bc .tour_tip_anchor {
+    width: 63px;
+    height: 57px;
+    margin: 0 0 -50px -40px;
+    bottom: -7px;
+    background: url("images/anchor_b.png") no-repeat left top transparent;
+    _background: url("images/anchor_b.gif") no-repeat left top transparent;
+}
+.tour_tip_ml .tour_tip_anchor.anchor_left {
+    width: 57px;
+    height: 63px;
+    right: -7px;
+    margin: 80px -60px 0 0;
+    background: url("images/anchor_l.png") no-repeat left top transparent;
+    _background: url("images/anchor_l.gif") no-repeat left top transparent;
+}
+.tour_tip_ml .tour_tip_anchor.anchor_right {
+    width: 57px;
+    height: 63px;
+    left: -7px;
+    margin: 20px 0 0 -55px;
+    background: url("images/anchor_r.png") no-repeat left top transparent;
+    _background: url("images/anchor_r.gif") no-repeat left top transparent;
+}
+
+.btn_done {
+    width: 117px;
+    height: 50px;
+    display: inline-block;
+    background: url("images/btn_done.jpg") no-repeat left top transparent;
+}
+
+.btn_done .btn_wrap {
+    display: none;
+}
+
+.btn_continue {
+    width: 117px;
+    height: 50px;
+    display: inline-block;
+    background: url("images/btn_continue.jpg") no-repeat left top transparent;
+}
+
+.btn_continue .btn_wrap {
+    display: none;
+}

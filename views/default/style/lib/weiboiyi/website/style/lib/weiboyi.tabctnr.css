@@ -1,0 +1,27 @@
+.weiboyiWindow_ml .weiboyiTabCtnr {
+    padding: 25px 50px;
+}
+
+.weiboyiTabCtnr_tabhead {
+    height: 40px;   
+}
+.weiboyiTabCtnr_tabhead li {
+    float: left;            
+}
+.weiboyiTabCtnr_tabhead li a {
+    text-align: center;
+    line-height: 36px;
+    border-bottom: 1px solid #398ee5;
+    display: block;
+    padding: 0 8px;
+}
+.weiboyiTabCtnr_tabhead li a.activeTab {
+    color: #999;
+}
+
+.weiboyiTabCtnr_tabhead li a.activeTab span {
+    display: block;
+    position: relative;
+    top: 1px;
+    background: url(images/container/tab_active.jpg) no-repeat center bottom;
+}

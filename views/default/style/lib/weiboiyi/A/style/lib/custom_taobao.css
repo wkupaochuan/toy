@@ -1,0 +1,279 @@
+/*
+.weiboyiWindow_tc {
+  background: url(images/custom_taobao/window/top-bottom.png) repeat-x left top;
+  padding-top: 4px;
+}
+
+.weiboyiWindow_tl {
+  padding-left: 9px;
+  background: url(images/custom_taobao/window/corners-sprite-tl.png) no-repeat left top;
+}
+
+.weiboyiWindow_tr {
+  padding-right: 9px;
+  background: url(images/custom_taobao/window/corners-sprite-tr.png) no-repeat right 0px;
+}
+
+.weiboyiWindow_bl {
+  padding-left: 9px;
+  background: url(images/custom_taobao/window/corners-sprite-bl.png) no-repeat left bottom;
+}
+
+.weiboyiWindow_br {
+  padding-right: 9px;
+  background: url(images/custom_taobao/window/corners-sprite-br.png) no-repeat right bottom;
+  border-bottom-color:#e2e2e2;
+}
+
+.weiboyiWindow_bc {
+  background: url(images/custom_taobao/window/corners-sprite-bc.png) repeat-x left bottom;
+  padding-bottom: 6px;
+  _margin-top: -5px;
+  +zoom: 1;
+}
+
+.weiboyiWindow_foot {
+  height: 43px;
+  text-align: right;
+  _padding-top: 5px;
+}
+
+.weiboyiWindow_btn {
+  margin: 8px 15px 0 0;
+  cursor: pointer;
+}
+
+.weiboyiWindow_mc {
+    background-color: #ffffff;
+}
+
+.weiboyiWindow_ml {
+  padding-left: 7px;
+  background:url(images/custom_taobao/window/left-right-ml.png)  repeat-y left top;
+}
+
+.weiboyiWindow_mr {
+  padding-right: 7px;
+  background:url(images/custom_taobao/window/left-right-mr.png) repeat-y right top;
+}
+
+.weiboyiWindow_head {
+  height: 35px;
+}
+
+.weiboyiWindow_head_title {
+  display: block;
+  float: left;
+  color: #666666;
+  font-size: 14px;
+  font-family: "微软雅黑", "宋体";
+}
+*/
+.weiboyiMessage_success {
+  background: url(images/custom_taobao/common/message_success.jpg) no-repeat 30px center transparent;
+}
+.weiboyiMessage_error {
+  background: url(images/custom_taobao/common/message_error.jpg) no-repeat 30px center transparent;
+}
+
+
+/** Grid start-- **/
+
+.weiboyiGrid {
+  background-color: white;
+}
+
+.weiboyiGrid_table {
+  width: 100%;
+}
+
+.weiboyiGrid_table thead th {
+  border-top: 2px solid #f09e3e;
+  background-color: #f8f9f8;
+  height: 40px;
+}
+
+.weiboyiGrid_table thead th div {
+  border-left: 1px dotted #b5b5b5;
+  height: 20px;
+  color: #333333;
+  font-weight: bold;
+}
+
+.weiboyiGrid_table thead th:first-child div {
+  border-left: none;
+}
+
+
+.weiboyiGrid_table td {
+  line-height: 20px;
+  padding: 10px 0;
+  color: #838383;
+  border-top: 1px solid #ebeceb;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
+.weiboyiGrid_table tr.even {
+  background-color: #fafafa;
+}
+
+.weiboyiGrid_table tr:first-child td {
+  border-top: 1px solid #cecfce;
+}
+
+.weiboyiGrid_table {
+  border-bottom: 1px solid #f09e3e;
+  border-collapse: collapse;
+}
+
+.weiboyiGrid_table_checkable {
+  text-align: center;
+  width: 50px;
+}
+
+.weiboyiGrid_table tr.disabledLine {
+  background-color: #DDD
+}
+
+.weiboyiGrid_table .disabledLine input {
+  display: none;
+}
+
+.weiboyiGrid_loading {
+  position: relative;
+}
+
+.weiboyiGrid_loading .weiboyiGrid_loadingMask {
+  display: block;
+}
+
+.weiboyiGrid_loadingMask {
+  display: none;
+  background: url(images/common/loading.gif) no-repeat center center;
+  min-height: 180px;
+  _height: 180px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.weiboyiPagebar {
+  padding: 10px 0 5px 0;
+  text-align: right;
+  color: #666666;
+}
+
+.weiboyiPagebar a {
+  text-decoration: none;
+}
+
+.weiboyiPagebar input {
+  width: 40px;
+  text-align: center;
+}
+
+.weiboyiPagebar .btn_small_simple,
+.weiboyiPagebar .btn_small_normal,
+.weiboyiPagebar .btn_small_disabled,
+.weiboyiPagebar .btn_simple_disabled,
+.weiboyiPagebar input,
+.weiboyiPageBar_current {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.weiboyiPageBar_current {
+  padding: 3px 0;
+  display: inline-block;
+}
+
+.weiboyiPageBar_current {
+  color: #F09E3E;
+}
+
+.btn_small_simple {
+  padding: 3px 10px 3px 10px;
+  border: 1px solid #DDD;
+  line-height: 16px;
+  color: #005588;
+  font-size: 12px;
+  display: inline-block;
+}
+
+.weiboyiPagebar .btn_simple_disabled {
+  border: 1px solid #DDD;
+  color: #666;
+  cursor: default;
+  line-height: 16px;
+  padding: 3px 10px 3px 10px;
+  display: inline-block;
+}
+
+.weiboyiPagebar .btn_simple_disabled .btn_wrap {
+  cursor: default;
+}
+
+.weiboyiPagebar a.btn_simple_disabled {
+  _background-position-y: -52px;
+  font-size: 12px;
+}
+
+.weiboyiPagebar .btn_simple_disabled.btn_prev {
+  padding-left: 20px;
+  background: url(images/custom_taobao/grid/pagebar_arrow_left.png) 10px -52px no-repeat;
+}
+.weiboyiPagebar .btn_simple_disabled.btn_next {
+  padding-right: 20px;
+  background: url(images/custom_taobao/grid/pagebar_arrow_right.png) 57px -52px no-repeat;
+}
+
+.weiboyiPagebar .btn_simple_disabled .btn_wrap {
+  background: none;
+}
+
+.weiboyiPagebar .btn_prev {
+  padding-left: 20px;
+  background: url(images/custom_taobao/grid/pagebar_arrow_left.png) 10px 7px no-repeat;
+}
+.weiboyiPagebar .btn_next {
+  padding-right: 20px;
+  background: url(images/custom_taobao/grid/pagebar_arrow_right.png) 57px 7px no-repeat;
+}
+
+.btn_small_simple:hover {
+  color: #F09E3E;
+  border: 1px solid #F09E3E;
+}
+
+.weiboyiMessagebox_taobao {
+
+}
+
+.weiboyiGridMsg {
+  height: 290px;
+  background: url(images/custom_taobao/grid/nodata.jpg) center bottom no-repeat transparent;
+}
+
+.weiboyiGridMsg .weiboyiGridMsg_content {
+  display: block;
+}
+
+.weiboyiGridMsg_content {
+  display: none;
+  width: 180px;
+  height: 60px;
+  margin: 74px auto;
+  padding-right: 60px;
+  word-break: break-all;
+  color: #666;
+  word-wrap: break-word;
+  font-size: 14px;
+}
+
+.weiboyiGridMsg_content a {
+    color: #196dae;
+    text-decoration: none;
+}

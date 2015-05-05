@@ -1,0 +1,295 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	background-color: whiteSmoke;
+}
+
+.box {
+	width:100%;
+	background-color: #fff;
+}
+.header {
+	height:93px;
+}
+.logo {
+	height:55px;
+	padding-top:10px;
+}
+
+.hotAll{
+	position:relative;
+}
+.hot_pic{
+	position:absolute;
+	left:55px;
+	top:-18px;
+}
+.iconDownload{
+	display: inline-block;
+	height: 20px;
+	width: 15px;
+	vertical-align: middle;
+	background: url(images/icon_download.gif) no-repeat left center;
+}
+.headerLogin_right{
+	display:block;
+	margin-top:30px;
+	margin-right:-8px;
+}
+.headerLogin_right li{
+	float:left;
+}
+.headerLogin_right li a{
+	color:#1572b3;
+	font-size:14px;
+	display:block;
+	float:left;
+	padding:0 10px;
+	border-right:1px solid #c5c5c5;
+	height:15px;
+	line-height:12px;
+	*height:16px;
+	*line-height:14px;
+}
+.loginMain{
+	width:1200px;
+	float:left;
+	margin-top:30px;
+}
+.loginMain_left{
+	width:467px;
+	height:361px;
+	padding-top:81px;
+	padding-left:136px;
+}
+.loginMain_right{
+	width:597px;
+	height:400px;
+}
+.login_tab{
+	font-size:14px;
+	color:#666;
+}
+.login_tab td, .login_tab th {
+	padding-left:10px;
+	padding-top: 10px;
+	vertical-align: top;
+	font-weight: normal;
+}
+
+.login_tab th {
+	padding-top: 20px;
+}
+
+
+.login_tab tr{
+	height:70px;
+}
+.login_top{
+	background:url(images/login_top_bj.jpg) no-repeat;
+	height:39px; 
+	line-height:39px;
+	text-align:center; 
+	color:#fff;
+	font-size:16px;
+}
+.login_bottom{
+	background:url(images/login_bottom_bj.jpg) no-repeat bottom;
+	height:12px;
+}
+.loginAll_input{
+	width:437px;
+	height:auto;
+}
+.login_input_main{
+	height:314px;
+	padding-top:20px;
+	border-left:1px solid #e2e2e2;
+	border-right:1px solid #e2e2e2; 
+	padding-left:22px;
+}
+.login_input, .login_input01{
+	width:293px;
+	height:32px;
+	line-height:32px;
+	border:none;
+	background:none; 
+	border:1px solid #cecece;
+	background:url(images/login_input.jpg) no-repeat;
+	padding-left:5px;
+}
+.login_input01{
+	width:110px;
+	vertical-align:middle;
+}
+.remember_username{
+	font-size:12px;
+}
+.remember_username a{
+	color:#1572b3;
+}
+.login_tab .remember_username_tr{
+	height:20px;
+}
+.verification_img{
+	vertical-align:middle;
+}
+.change_img{
+	font-size:12px;
+	color:#1572b3;
+}
+.remember_username input{
+	vertical-align:-2px;
+	*vertical-align:middle;
+}
+.remember_username .loginBtn01, .remember_username .loginBtn02{
+	width:112px;
+	height:38px;
+	line-height:38px;
+	text-align:center;
+	display:block;
+	color:#fff;
+	font-size:18px;
+	margin-right:20px;
+}
+.loginBtn01{
+	background:url(images/login_btn.jpg) no-repeat 0 0;
+}
+.loginBtn01:hover{
+	text-decoration:none;
+	background:url(images/login_btn.jpg) no-repeat 0 -38px;
+}
+.loginBtn02{
+	background:url(images/login_btn.jpg) no-repeat 0 -76px;
+}
+.loginBtn02:hover{
+	text-decoration:none;
+	background:url(images/login_btn.jpg) no-repeat 0 -114px;
+}
+
+.imagebox_item {
+	position: absolute;
+}
+.imagebox_item img {
+	width: 366px;
+	height: 280px;
+}
+
+.imagebox_firstItem {
+	z-index: 1;
+}
+
+.imagebox {
+	width: 366px;
+	height: 280px;
+	overflow: hidden;
+	position: relative;
+}
+
+.imagebox ul {
+	position: absolute;
+	display: block;
+}
+
+label.validateError {
+	display: none;
+	height:14px;
+	line-height: 14px;
+	padding-left: 16px;
+	background: url(images/icon_tips.jpg) no-repeat;
+	vertical-align: middle;
+	background-position:left -23px;
+	background-position:left -26px\9; 
+	color: #ff0000;
+}
+
+.notice {
+	display: none;
+}
+
+.notice p {
+	color: #333;
+	line-height: 21px;
+	text-align: left;
+	text-indent: 24px;
+}
+
+.header_all {
+	height:169px;
+	background:url(images/header_bj.jpg) repeat-x;
+}
+
+
+.header_data {
+	height:28px;
+	line-height:28px;
+	overflow:hidden;
+}
+.header_data_left em {
+	color:#f95320;
+	margin-right:4px;
+}
+.header_data_left {
+	border-right:1px solid #ddd;
+	display:block;
+	padding-right:6px;
+}
+.header_data_right {
+	padding-left:46px;
+	border-left:1px solid #fff;
+	_display:block;
+	_padding-top:5px;
+}
+.header_data_right a {
+	padding:0 11px;
+	color:#3283bc;
+	height:13px;
+	line-height:13px;
+	display:inline-block;
+	border-right:1px solid #c5c5c5;
+}
+.header_data_right a:hover {
+	text-decoration:underline;
+}
+
+/*版权footer*/
+.footer {
+	height:42px;
+	line-height:42px;
+	border-top:1px solid #dbdbdb;
+	background:#f5f5f5;
+	color:#9f9f9f;
+	margin-top: 60px;
+}
+.footer_right {
+	_display:block;
+	_padding-top:12px;
+}
+.footer a {
+	display:inline-block;
+	height:16px;
+	line-height:16px;
+	padding:0 14px;
+	margin:0 6px;
+	color:#aaa;
+	border-right:1px solid #c1c1c1;
+}
+.footer .about_a {
+	background:url(images/footer_icon.gif) no-repeat 0 0;
+	padding-left:22px;
+}
+.footer .contact_a {
+	background:url(images/footer_icon.gif) no-repeat 0 -29px;
+	padding-left:28px;
+}
+.footer .service_a {
+	background:url(images/footer_icon.gif) no-repeat 0 -57px;
+	padding-left:19px;
+}
+.footer_right {
+	_display:block;
+	_padding-top:12px;
+}
+.footer .b_none {
+	border-right:none;
+}

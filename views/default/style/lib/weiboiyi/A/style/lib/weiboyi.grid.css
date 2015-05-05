@@ -1,0 +1,310 @@
+.weiboyiGrid {
+    background-color: white;
+    font-size: 12px;
+}
+
+.weiboyiGrid a {
+    color: #2276b3;
+}
+
+.weiboyiGrid_table {
+    width: 100%;
+    font-size: 12px;
+}
+
+.weiboyiGrid_table thead th {
+    border-top: 3px solid #4e9bcf;
+    height: 38px;
+    background: url(images/grid/thead.jpg)  repeat-x center center #e7ecf2;
+}
+
+.weiboyiGrid_thcontent {
+    height: 30px;
+    line-height: 30px;
+    color: #414141;
+    font-weight: bold;
+    padding: 0 3px;
+    text-align: center;
+    background: url(images/grid/thead_sp.jpg)  no-repeat left bottom #e7ecf2;
+}
+
+.weiboyiGrid_thtips {
+    width: 12px;
+    height: 12px;
+    margin-left: 4px;
+    display: inline-block;
+    background: url(images/grid/thead_tips.gif);
+}
+
+.weiboyiGrid_table thead th:first-child div {
+    background-image: none;
+}
+
+
+.weiboyiGrid_table td {
+    line-height: 20px;
+    padding: 2px 3px;
+    color: #333333;
+    border-top: 1px dashed #d8d8d8;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+.weiboyiGrid_table tr.even {
+    background-color: #f8f9fb;
+}
+
+.weiboyiGrid_table tr:first-child td {
+    border-top: none;
+}
+
+.weiboyiGrid_table {
+    border-bottom: 1px solid #e9e6e6;
+    border-collapse: collapse;
+}
+
+.weiboyiGrid_table_checkable {
+    text-align: center;
+    width: 50px;
+}
+
+.weiboyiGrid_table tr.disabledLine {
+    background-color: #DDD;
+}
+
+.weiboyiGrid_table .disabledLine input {
+    display: none;
+}
+
+.weiboyiGrid_table tr.highlightLine td {
+    background-color: #ffcfb1;
+}
+
+.weiboyiGrid_table tr.highlightLine td {
+    border-top: 1px solid #ff876f;
+    border-bottom: 1px solid #ff876f;
+}
+
+.weiboyiGrid_loading {
+    position: relative;
+    min-height: 290px;
+    _height: 290px;
+}
+
+.weiboyiGrid_loading .weiboyiGrid_loadingMask {
+    display: block;
+}
+
+.weiboyiGrid_loadingMask {
+    display: none;
+    background: url(images/common/loading.gif) no-repeat center center black;
+    min-height: 290px;
+    _height: 290px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.2;
+    filter: alpha(opacity=20);
+}
+
+.weiboyiGrid_cellEditor {
+    display: none;
+    height: 20px;
+    resize: none;
+}
+
+.weiboyiGrid_optsCell a {
+    margin: 0 6px;
+}
+
+.weiboyiGrid_table tr td.editing {
+    padding: 0;
+    background: none;
+}
+
+.weiboyiGrid td.weiboyiGrid_editableCell {
+    cursor: pointer;
+    padding-left: 26px;
+    background-image: url(images/grid/editable.gif);
+    background-repeat: no-repeat;
+    background-position: 8px center;
+}
+
+.weiboyiGrid td.weiboyiGrid_cellPending {
+    cursor: default;
+}
+
+.weiboyiGrid .disabledLine td.weiboyiGrid_editableCell {
+    cursor: default;
+}
+
+.weiboyiGrid td.editing {
+    padding-right: 0;
+}
+
+.weiboyiGrid .editing .weiboyiGrid_cellContent {
+    display: none;
+}
+
+.weiboyiGrid .editing .weiboyiGrid_cellEditor {
+    display: block;
+}
+
+.weiboyiGrid_cellPending .weiboyiGrid_cellContent {
+    background: url(images/grid/pending.gif) no-repeat right center transparent;
+}
+
+.weiboyiPagebar {
+    float:right;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.weiboyiPagebar a {
+    text-decoration: none;
+    margin-right:5px;
+    margin-left:5px;
+}
+
+.weiboyiPagebar input {
+    text-align: center;
+    width: 58px;
+    border: none;
+    border: 1px solid #D8E1E8;
+    height: 30px;
+    line-height: 30px;
+    margin: 0 2px;
+    vertical-align: middle;
+}
+.weiboyiPagebar .btn_small_simple .btn_wrap,
+.weiboyiPagebar .btn_prev .btn_wrap,
+.weiboyiPagebar .btn_next .btn_wrap {
+    background: none;
+    padding: 0;
+    display: inline;
+}
+
+
+.weiboyiPagebar .btn_goto {
+    vertical-align: middle;
+}
+
+.weiboyiPagebar .btn_goto span {
+    padding-right: 16px;
+}
+
+.weiboyiPageBar_current, .btn_small_simple:hover {
+    display: inline-block;
+    background:#3399ff;
+    color:#fff;
+    border:1px solid #3399ff;
+    height: 30px;
+    line-height: 30px;
+    width: 30px;
+    text-align:center;
+}
+.btn_small_simple {
+    color: #005588;
+    display: inline-block;
+    width: 30px;
+    border: 1px solid #D8E1E8;
+    background: #fff;
+    line-height: 30px;
+    text-align: center;
+}
+.weiboyiPagebar .btn_simple_disabled {
+    border: 1px solid #D8E1E8;
+    color: #666;
+    cursor: default;
+    line-height: 16px;
+    display: inline-block;
+    width: 56px;
+}
+.weiboyiPagebar a.btn_simple_disabled {
+    _background-position-y: -52px;
+    font-size: 12px;
+}
+.weiboyiPagebar .btn_simple_disabled.btn_prev:hover,
+.weiboyiPagebar .btn_simple_disabled.btn_next:hover{
+    text-decoration: none;
+    color: #333;
+
+}
+.weiboyiPagebar .btn_simple_disabled.btn_prev {
+    padding-left: 29px;
+    background: url(/style/module/images/userInfoIcon_v1.gif) no-repeat 14px -718px;
+    width:56px;
+    text-align: left;
+    cursor:default ;
+}
+.weiboyiPagebar .btn_simple_disabled.btn_next {
+    background: url(/style/module/images/userInfoIcon_v1.gif) no-repeat 63px -758px;
+    height: 30px;
+    line-height: 30px;
+    padding-left:19px;
+    width: 66px;
+    text-align: left;
+    cursor:default ;
+}
+
+.weiboyiPagebar .btn_simple_disabled .btn_wrap {
+    background: none;
+    cursor: default;
+}
+
+.weiboyiPagebar .btn_prev {
+    padding-left: 29px;
+    background: url(/style/module/images/userInfoIcon_v1.gif) no-repeat 14px -625px;
+    width: 56px;
+    line-height: 30px;
+    border: 1px solid #D8E1E8;
+    display: inline-block;
+    text-align: left;
+}
+.weiboyiPagebar .btn_prev:hover{
+    color: #3399ff;
+}
+.weiboyiPagebar .btn_next {
+    background: url(/style/module/images/userInfoIcon_v1.gif) no-repeat 60px -670px;
+    width: 66px;
+    padding-left:19px;
+    border: 1px solid #D8E1E8;
+    line-height: 30px;
+    display: inline-block;
+    text-align: left;
+}
+.weiboyiPagebar .btn_next:hover{
+    color: #3399ff;
+}
+
+
+.weiboyiMessagebox_taobao {
+
+}
+
+.weiboyiGridMsg {
+    height: 290px;
+    background: url(images/grid/nodata.jpg) center bottom no-repeat transparent;
+}
+
+.weiboyiGridMsg .weiboyiGridMsg_content {
+    display: block;
+}
+
+.weiboyiGridMsg_content {
+    display: none;
+    width: 100px;
+    height: 40px;
+    margin: 100px auto;
+    padding-right: 48px;
+    word-break: break-all;
+    word-wrap: break-word;
+    color: #FF7010;
+    font-weight: bold;
+}
+
+.weiboyiGridMsg_content a {
+    color: #196dae;
+    text-decoration: none;
+}

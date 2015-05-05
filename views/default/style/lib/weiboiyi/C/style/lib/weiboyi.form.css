@@ -1,0 +1,92 @@
+/** 表单美化 start-- **/
+.prettifyElement {
+  position: absolute;
+  left: -9999px;
+}
+
+.prettifySelect {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  background-color: transparent;
+  line-height: 15px;
+  height: 22px;
+  *overflow: hidden;
+  vertical-align: middle;
+}
+
+.prettifySelect a {
+  border: 0;
+  line-height: 17px;
+  text-decoration: none;
+  /*font-size: 14px;*/
+  display: block;
+  /*padding: 3px 12px 3px 5px !important;*/
+  padding: 2px 6px 1px 2px;
+}
+
+.prettifySelect_wrap {
+  border: 1px solid #bebebe;
+  *display: inline;
+  *zoom: 1;
+}
+
+.prettifySelect .prettifySelect_title {
+  color: #8c8c8c;
+  _zoom: 1;
+  background: url(images/form/select_anchor.jpg) no-repeat right center white;
+}
+
+.prettifySelect ul {
+  position: absolute;
+  overflow-y: auto;
+  z-index: 9999;
+  border: 1px solid #bebebe;
+  border-top: 0;
+  background: #fff;
+  margin: 1px -1px;
+}
+
+.prettifySelect ul li:last-child a {
+
+}
+
+.prettifySelect ul a {
+  color: #8c8c8c;
+}
+.prettifySelect ul a:hover {
+  color: #4887B4;
+  background-color: #E8E8E8;
+}
+.prettifySelect:hover .prettifySelect_title {
+  
+}
+.prettifySelect:hover .prettifySelect_dropdown {
+  
+}
+.prettifySelect.open .prettifySelect_title {
+
+}
+.prettifySelect.open .prettifySelect_dropdown {
+}
+
+.placeholder {
+  color: gray;
+}
+.placeholder {
+  color: gray;
+}
+
+.weiboyiPlaceholder {
+  position: relative;
+  display: inline-block;
+}
+
+.weiboyiPlaceholder_content {
+  position: absolute;
+  background-color: transparent;
+  color: #a9a9a9;
+  margin: 0 3px;
+  _margin: 3px 3px;
+}
+/** 表单美化 --end **/

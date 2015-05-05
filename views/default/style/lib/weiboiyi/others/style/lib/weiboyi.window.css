@@ -1,0 +1,187 @@
+
+/** window start-- **/
+.weiboyiWindow {
+  position: absolute;
+  display: none;
+}
+.ui-draggable .weiboyiWindow_tl {
+  cursor: move;
+}
+
+.weiboyiWindow_tc {
+  background: url(images/window/top-bottom.png) repeat-x left top;
+  padding-top: 7px;
+}
+
+.weiboyiWindow_tl {
+  padding-left: 6px;
+  background: url(images/window/corners-sprite-tl.png) no-repeat left top;
+}
+
+.weiboyiWindow_tr {
+  padding-right: 6px;
+  background: url(images/window/corners-sprite-tr.png) no-repeat right 0px;
+}
+
+.weiboyiWindow_bl {
+  padding-left: 6px;
+  background: url(images/window/corners-sprite-bl.png) no-repeat left bottom;
+}
+
+.weiboyiWindow_br {
+  padding-right: 6px;
+  background: url(images/window/corners-sprite-br.png) no-repeat right bottom;
+  border-bottom-color:#99bbe8;
+}
+
+.weiboyiWindow_bc {
+  background: url(images/window/corners-sprite-bc.png) repeat-x left bottom;
+  padding-bottom: 6px;
+  _margin-top: -5px;
+  +zoom: 1;
+}
+
+.weiboyiWindow_foot {
+  height: 43px;
+  text-align: right;
+  _padding-top: 5px;
+}
+
+.weiboyiWindow_btn {
+  margin: 8px 15px 0 0;
+  cursor: pointer;
+}
+
+.weiboyiWindow_mc {
+    background-color: #ffffff;
+}
+
+.weiboyiWindow_ml {
+  padding-left: 6px;
+  background:url(images/window/left-right-ml.png)  repeat-y left top;
+}
+
+.weiboyiWindow_mr {
+  padding-right: 6px;
+  background:url(images/window/left-right-mr.png) repeat-y right top;
+}
+
+.weiboyiWindow_head {
+  height: 36px;
+  line-height: 36px;
+  padding: 0 12px 0 12px;
+    overflow: hidden;
+}
+
+.weiboyiWindow_head_tools {
+  float: right;
+  line-height: 30px;
+  display: block;
+  height: 30px;
+}
+
+.weiboyiWindow_head_title {
+  display: block;
+  float: left;
+  color: #333333;
+  font-size: 14px;
+  font-family: "微软雅黑", "宋体";
+}
+
+.weiboyiWindow_head_icon {
+  display: block;
+  float: left;
+  height: 20px;
+  width: 20px;
+}
+
+.weiboyiWindow_mask {
+  position: fixed;
+  background: black;
+  -moz-opacity: 0.6;
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: none;
+  _position: absolute;
+}
+
+.weiboyiWindow_mask iframe {
+    filter: alpha(opacity=0);
+    width: 100%;
+    height: 100%;
+}
+
+.weiboyiWindow_body {
+  overflow: auto;
+  padding: 10px;
+}
+
+.weiboyiWindow_animateHelper {
+  position: absolute;
+  background-color: gray;
+  opacity: 0.5;
+}
+
+.ie6mask {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: transparent;
+  filter: alpha(opacity=0);
+  z-index: 10;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.weiboyiWindow .weiboyiTool {
+  *margin-top: 8px;
+}
+
+.weiboyiWindow.absoluteCenter {
+  left: 50%;
+  top: 50%;
+  position: fixed;
+  _position: absolute;
+  _top: expression(eval(document.documentElement.scrollTop + document.documentElement.clientHeight / 2));
+  _left: expression(eval(document.documentElement.scrollLeft + document.documentElement.clientWidth / 2));
+  zoom: 1;
+}
+
+/** messagebox start-- **/
+.weiboyiMessage_ctnr {
+  text-align: center;
+}
+
+.weiboyiMessage_content {
+  display: inline-block;
+  padding: 35px 20px 35px 115px;
+  text-align: left;
+  vertical-align: middle;
+  font-size: 14px;
+  line-height: 18px;
+  word-wrap: break-word;
+  word-break: break-all;
+  color: #666666;
+}
+
+.weiboyiMessage_success {
+  background: url(images/common/message_success.jpg) no-repeat 30px center transparent;
+}
+.weiboyiMessage_question {
+  background: url(images/common/message_question.jpg) no-repeat 30px center transparent;
+}
+.weiboyiMessage_info {
+  background: url(images/common/message_info.jpg) no-repeat 30px center transparent;
+}
+.weiboyiMessage_error {
+  background: url(images/common/message_error.jpg) no-repeat 30px center transparent;
+}
+.weiboyiMessage_loading {
+  background: url(images/common/loading.gif) no-repeat 20px center transparent;
+}
+/** messagebox --end **/

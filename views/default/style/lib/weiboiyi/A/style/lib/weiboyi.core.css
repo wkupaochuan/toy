@@ -1,0 +1,154 @@
+/* 微博易前端库 **/
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to {opacity: 1; }
+}
+
+@-moz-keyframes fadeIn {
+  from { opacity: 0; }
+  to {opacity: 1; }
+}
+
+@-webkit-keyframes fadeIn {
+  from { opacity: 0; }
+  to {opacity: 1; }
+}
+
+@-o-keyframes fadeIn {
+  from { opacity: 0; }
+  to {opacity: 1; }
+}
+
+/** 工具按钮样式 start-- **/
+.weiboyiTool_close {
+  background-position:-15px 0;
+}
+.weiboyiTool_close:hover {
+  background-position:0 0;
+}
+.weiboyiTool_minimize {
+  background-position:-15px -15px;
+}
+.weiboyiTool_minimize:hover {
+  background-position:0 -15px;
+}
+.weiboyiTool_maximize {
+background-position:-15px -30px;
+}
+.weiboyiTool_maximize:hover {
+background-position:0 -30px;
+}
+.weiboyiTool_restore {
+background-position:-15px -45px;
+}
+.weiboyiTool_restore:hover {
+background-position:0 -45px;
+}
+.weiboyiTool_gear {
+background-position:-15px -90px;
+}
+.weiboyiTool_gear:hover {
+background-position:0 -90px;
+}
+.weiboyiTool_pin {
+background-position:-15px -135px;
+}
+.weiboyiTool_pin:hover {
+background-position:0 -135px;
+}
+.weiboyiTool_unpin {
+background-position:-15px -150px;
+}
+.weiboyiTool_unpin:hover {
+background-position:0 -150px;
+}
+.weiboyiTool_right {
+background-position:-15px -165px;
+}
+.weiboyiTool_right:hover {
+background-position:0 -165px;
+}
+.weiboyiTool_left {
+background-position:-15px -180px;
+}
+.weiboyiTool_left:hover {
+background-position:0 -180px;
+}
+.weiboyiTool_up {
+background-position:-15px -210px;
+}
+.weiboyiTool_up:hover {
+background-position:0 -210px;
+}
+.weiboyiTool_down {
+background-position:-15px -195px;
+}
+.weiboyiTool_down:hover {
+background-position:0 -195px;
+}
+.weiboyiTool_refresh {
+background-position:-15px -225px;
+}
+.weiboyiTool_refresh:hover {
+background-position:0 -225px;
+}
+.weiboyiTool_minus {
+background-position:-15px -255px;
+}
+.weiboyiTool_minus:hover {
+background-position:0 -255px;
+}
+.weiboyiTool_plus {
+background-position:-15px -240px;
+}
+.weiboyiTool_plus:hover {
+background-position:0 -240px;
+}
+.weiboyiTool_search {
+  background-position:-15px -270px;
+}
+.weiboyiTool_search:hover {
+  background-position:0 -270px;
+}
+.weiboyiTool_save {
+  background-position:-15px -285px;
+}
+.weiboyiTool_save:hover {
+  background-position:0 -285px;
+}
+.weiboyiTool_help {
+  background-position:-15px -300px;
+}
+.weiboyiTool_help:hover {
+background-position:0 -300px;
+}
+.weiboyiTool_more {
+  background-position:-15px -315px;
+}
+.weiboyiTool_more:hover {
+  background-position:0 -315px;
+}
+
+.weiboyiTool_custom {
+  color: #1366a3;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.weiboyiTool_custom:hover {
+  text-decoration: underline;
+}
+
+.weiboyiTool {
+  display: inline-block;
+  overflow:hidden;
+  width:15px;
+  height:15px;
+  cursor:pointer;
+  margin-left:2px;
+  vertical-align: middle;
+  background-image:url(images/common/tool-sprites.png);
+}
+
+/** tools --end **/

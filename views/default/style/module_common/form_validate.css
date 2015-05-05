@@ -1,0 +1,53 @@
+.validate_item {
+
+}
+
+.validate_error, .validate_success_ico {
+    display: none !important;
+}
+
+.validate_fail .validate_error {
+    display: inline-block !important;
+}
+
+.validate_fail .validate_tips {
+    display: none !important;
+}
+
+.validate_success .validate_success_ico {
+    display: inline-block !important;
+}
+
+label.validate_error,
+label.validate_tips,
+label.validate_success_ico,
+label.error,
+label.correct{
+    height:18px;
+    line-height: 18px;
+    padding-left: 18px;
+    background: url('images/icon_tips.jpg') no-repeat;
+    vertical-align: middle;
+    color: #ff0000;
+}
+
+label.validate_error {
+    background-position:left -25px;
+}
+
+label.validate_tips {
+    color: #333;
+    background-position:left -54px;
+}
+
+label.validate_success_ico {
+    background-position:left 0;
+}
+
+label.error {
+    background-position:left -25px;
+}
+
+label.correct {
+    background-position:left 0;
+}

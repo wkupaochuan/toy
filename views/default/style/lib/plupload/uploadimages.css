@@ -20,7 +20,13 @@
     _zoom: 1;
     _width: 80px;
 }
-
+.uploadattach_item_wrap{
+    display:inline-block;
+    float: left;
+}
+.uploadattach_item_wrap a{
+    color:#666;
+}
 .upload_item_link {
     display: block;
     float: left;
@@ -44,6 +50,15 @@
     background-color: #09f;
 }
 
+.block_when_uploading .upload_progress {
+    position: fixed;
+    z-index: 1000000;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
 .upload_item_num {
     position: absolute;
     display: block;
@@ -59,13 +74,12 @@
 }
 
 .uploadattach_item {
+    background: url(images/attachment_v2.png) no-repeat left 0px;
+    position:relative;
+    clear: both;
+    padding:5px 0px 5px 30px;
     line-height: 18px;
-    background: url(images/attachment.png) no-repeat left 5px;
-    list-style: none;
-    position: relative;
-    padding: 5px 0px 5px 37px;
-    overflow: hidden;
-    min-height:28px
+    height:30px;
 }
 
 .uploadattach_item_link {
@@ -73,5 +87,14 @@
 }
 
 .uploadattach_remove {
-    float: right;
+    float: left;
+    display:inline-block;
+    margin-left: 10px;
+    margin-top:2px;
+
+}
+.reservation_filename{
+    display: block;
+    width: 489px;
+    line-height: 18px;
 }

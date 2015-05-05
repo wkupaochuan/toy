@@ -1,0 +1,56 @@
+.preview_win {
+    position: absolute;
+    left: 50%;
+    top: 0;
+
+    z-index: 99999;
+
+    width: 393px;
+    min-height: 665px;
+    margin: 0 -26px 5px -197px;
+    background-size: 393px 665px;
+    background: url('images/preview_phone.png') 0 0 no-repeat;
+}
+
+.preview_content {
+    margin: 149px 35px 0 38px;
+    height: 416px;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    background: #fff;
+}
+
+.preview_go_back {
+    position: absolute;
+    width: 80px;
+    height: 30px;
+    top: 115px;
+    left: 40px;
+
+    cursor: pointer;
+}
+
+.preview_win_close {
+    display: block;
+    position: absolute;
+    top: 0px;
+    right: -35px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 14px;
+}
+
+.preview_win_tips {
+    display: block;
+    position: absolute;
+    top: 100px;
+    left: -300px;
+    width: 294px;
+    height: 40px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+}
