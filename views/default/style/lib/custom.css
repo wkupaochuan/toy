@@ -1,0 +1,211 @@
+/** 反馈窗口 **/
+.feedbackWindow.weiboyiWindow {
+    background: url(/img/idea_bg.jpg) no-repeat 20px -352px white;
+    border: 3px solid #C7C8C8;
+}
+
+.feedbackWindow .weiboyiWindow_tc, 
+.feedbackWindow .weiboyiWindow_tr, 
+.feedbackWindow .weiboyiWindow_tl, 
+.feedbackWindow .weiboyiWindow_mc, 
+.feedbackWindow .weiboyiWindow_mr, 
+.feedbackWindow .weiboyiWindow_ml, 
+.feedbackWindow .weiboyiWindow_bc, 
+.feedbackWindow .weiboyiWindow_br,
+.feedbackWindow .weiboyiWindow_bl {
+    background: transparent;
+}
+
+
+.feedbackWindow .weiboyiWindow_head {
+    height: 41px;
+}
+
+.feedbackWindow .weiboyiWindow_head_tools {
+    margin: -10px -10px 0 0;
+}
+
+
+/** 数据释放 start-- **/
+.freedataWindow .weiboyiWindow_bl,
+.freedataWindow .weiboyiWindow_br,
+.freedataWindow .weiboyiWindow_bc {
+  background: transparent;
+  height: 0;
+  _overflow: hidden;
+}
+.freedataWindow .weiboyiWindow_body  {
+  padding-bottom: 40px;
+}
+
+.freedataWindow_btn {
+  position: relative;
+  top: -50px;
+  width: 101px;
+  height: 26px;
+  background: url("images/custom/freedataWindow_btn.jpg") repeat left top transparent;
+  display: inline-block;
+}
+
+.freedataWindow .weiboyiWindow_tl {
+  height: 0;
+}
+
+.freedataWindow .weiboyiWindow_ml, .freedataWindow .weiboyiWindow_mr {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.freedataWindow .weiboyiWindow_ml {
+  background: black;
+  background: url("images/custom/freedataWindow_shadow.png") repeat left top transparent;
+}
+
+.freedataWindow .weiboyiWindow_mr {
+  border: 1px solid #5da2da;
+  position: relative;
+  top: -6px;
+  left: -5px;
+}
+
+.freedataWindow .weiboyiWindow_mc {
+  background: #ffffff;
+}
+
+.freedataWindow .weiboyiTabCtnr_tabhead {
+  height: 38px;
+  _width: 104%;
+  overflow: hidden;
+  margin: -10px -10px 10px -10px;
+}
+
+.freedataWindow .weiboyiTabCtnr_tabhead ul {
+  width: 104%;
+  display: block;
+}
+
+.freedataWindow .weiboyiTabCtnr_tabhead li {
+  display: block;
+  height: 38px;
+  width: 24%;
+  float: left;
+  text-align: center;
+  border-right: 1px solid #dbdee5;
+  padding: 0px 1px;
+  font-size: 16px;
+}
+
+.freedataWindow .weiboyiTabCtnr_tabhead a {
+  background: url(images/custom/freedataWindow_tabtitle.jpg) repeat-x left top transparent;
+  padding-top: 10px;
+  display: block;
+  height: 100%;
+  color: #666666;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+
+.freedataWindow .weiboyiTabCtnr_tabhead a.activeTab {
+  background: #fff;
+  color: #f19133;
+  font-size: 16px;
+}
+
+.freedataWindow .weiboyiTabCtnr_tabhead a:link, .freedataWindow .weiboyiTabCtnr_tabhead a:visited {
+  color: #666666;
+  font-size: 16px;
+  font-family: "微软雅黑";
+}
+
+.freedataWindow .weiboyiTabCtnr_tabhead a:hover {
+  color: #f19133;
+  font-size: 16px;
+  font-family: "微软雅黑";
+}
+
+.freedataWindow .weiboyiTabCtnr_tabhead a:active {
+  color: #666666;
+  font-size: 16px;
+  font-family: "微软雅黑";
+}
+
+.freedataWindow .weiboyiTool_close {
+  z-index: 1;
+  position: absolute;
+  right: -10px;
+  top: -20px;
+  width: 24px;
+  height: 24px;
+  background: url(images/custom/freedataWindow_closetool.png) no-repeat left top transparent;
+}
+.freedataWindow .weiboyiTool_close:hover {
+  background-position: 0 0;
+}
+
+.freedataWindow .weiboyiWindow_head, .freedataWindow .weiboyiWindow_tc, .freedataWindow .weiboyiWindow_tl, .freedataWindow .weiboyiWindow_tr {
+  background: transparent;
+  overflow: hidden;
+}
+
+.freedataWindow .weiboyiTabCtnr_icon {
+  margin-right: 5px;
+}
+
+.freedataWindow .weiboyiWindow_head_title {
+  background: url(images/custom/freedata_title_r.gif) no-repeat right bottom transparent;
+  _background-position-y: 8px;
+  font-size: 12px;
+  height: 25px;
+  display: block;
+  position: absolute;
+  top: 21px;
+  left: 15px;
+  z-index: 51000;
+  padding: 4px 3px 0 0;
+  line-height: 28px;
+  color: #333;
+}
+
+.freedataWindow .weiboyiWindow_head_title span {
+  padding: 0 7px 0 10px;
+  display: inline-block;
+  background: url(images/custom/freedata_title_l.gif) no-repeat left top transparent;
+}
+
+
+.freedataIcon1 {
+    background: url(images/custom/freedata_icon1.jpg) no-repeat left top transparent;
+}
+
+.activeTab .freedataIcon1 {
+    background: url(images/custom/freedata_icon1_active.jpg) no-repeat left top transparent;
+}
+.freedataIcon2 {
+    background: url(images/custom/freedata_icon2.jpg) no-repeat left top transparent;
+}
+
+.activeTab .freedataIcon2 {
+    background: url(images/custom/freedata_icon2_active.jpg) no-repeat left top transparent;
+}
+.freedataIcon3 {
+    background: url(images/custom/freedata_icon3.jpg) no-repeat left top transparent;
+}
+
+.activeTab .freedataIcon3 {
+    background: url(images/custom/freedata_icon3_active.jpg) no-repeat left top transparent;
+}
+.freedataIcon4 {
+    background: url(images/custom/freedata_icon4.jpg) no-repeat left top transparent;
+}
+
+.activeTab .freedataIcon4 {
+    background: url(images/custom/freedata_icon4_active.jpg) no-repeat left top transparent;
+}
+/** 数据释放 --end **/
+
+/** weiboyiZtree start **/ 
+.weiboyiTree.ztree li ul.level0 {
+  *margin-left: 20px;
+}
+/** weiboyiZtree end **/ 

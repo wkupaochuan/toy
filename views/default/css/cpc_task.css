@@ -1,0 +1,377 @@
+@CHARSET "UTF-8";
+#form_addtaskinfo {width:820px;margin:0 auto}
+#form_addtaskinfo dt{float:left;width:120px;text-align:right;height:30px;line-height:30px;}
+#form_addtaskinfo dd{float:left;width:350px;line-height:30px;}
+#form_addtaskinfo dd.data select{width:300px;}
+#form_addtaskinfo dd.data input{width:300px;}
+#form_addtaskinfo dd.data textarea{width:300px;}
+
+.strong_tip{
+    font-weight: bold;
+    color: #F00;
+}
+
+table.caseListView,
+.caseListView tbody {
+    vertical-align: top;
+}
+
+table.taskView, table.caseListView, table.countView, table.taskListView{
+	border: solid 1px #300;
+	table-layout:fixed;
+	word-wrap: break-word;
+}
+table.taskView td{
+	border: solid 1px #300;
+	align :left;
+}
+table.updateTask span{
+	float:right;
+	color:red;
+	margin-top:5px;
+	padding-top:5px;
+}
+table.updateTask span.strong_tip{
+    float:left
+}
+table.updateTask td {
+	border: 0;
+}
+table.updateTask tr{
+	hegiht:30px;
+}
+table.taskView tr , table.countView tr ,table.caseListView tr, table.taskListView tr{
+	height : 25px;
+	valign : bottom
+}
+table.caseListView strong ,table.taskListView strong{
+	color:#fff
+}
+.colorTr {
+	background-color: #3399FF;
+}
+table.countView td ,table.caseListView td{
+	border: solid 1px #300;
+	align:center;
+}
+.paddingLeft{
+	padding-left:60px;
+	overflow:hidden;
+}
+.fixWidth span{
+	width:300px;
+	float:left
+}
+table.taskListView td{
+	border: solid 1px #300;
+	align :center;
+}
+
+.blackFont h6{
+	color:#000;
+}
+.ajaxLoading {
+    width: 100%;
+    height: 100%;
+    background: url("/img/waiting.gif") no-repeat center center black;
+    z-index: 100000000000;
+    position: fixed;
+    _position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+}
+
+.taskB_all{
+    width:445px;
+    height:auto;
+    border:3px solid #f2f2f2;
+    padding:10px;
+	float:left;
+}
+.taskB_top{
+    height:30px;
+    margin-bottom:10px;
+    border-bottom:1px dashed #ccc;
+    padding-bottom:6px;
+}
+.taskB{
+	width:325px;
+	float:right;
+}
+.taskB ul li{
+	list-style:none;
+}
+.taskB_img_box{
+    width:120px;
+    text-align:center;
+    float:left;
+}
+.taskB_img{
+    max-height:70px;
+    max-width:120px;
+    width:auto;
+}
+.taskB em{
+	color:#f30;
+	font-style:normal;
+}
+.taskB ul li{
+    line-height:22px;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+.taskB_btn1, .taskB_btn2{
+    width:70px;
+    height:26px;
+    background:none;
+    border:none;
+    cursor:pointer;
+}
+.taskB_btn1{
+    color:#fff;
+    background:url("/img/activation_btn.jpg") no-repeat;
+}
+.taskB_btn2{
+    background:url("/img/cancel_btn.jpg") no-repeat;
+}
+.task_pic02{
+    max-width: 151px;
+    max-height:91px;
+    width: auto;
+}
+.task_pic01{
+    max-width: 120px;
+    max-height:70px;
+    width: auto;
+}
+.tt_box{
+    width:650px;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+.tt_box a{
+    color:#3283bc;
+}
+table.tt_middle td{
+    vertical-align:middle;
+    border: solid 1px #300;
+}
+.taskList_tt td{
+    border: solid 1px #300;
+}
+.taskDiv{
+    width:1200px;
+    float:left;
+    padding-left: 90px;
+    margin: 5px auto;
+}
+.taskDivList{
+    width:1300px;
+    margin-top: 10px;
+    padding-left: 90px;
+    clear: both;
+}
+.taskConfirm{
+    float:left;
+    width:1200px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.taskspan{
+    margin-bottom: 20px;
+}
+.taskcenter{
+    text-align: center;
+}
+.taskboxline{
+    border:solid black 1px;
+    margin-top: 10px;
+    padding: 2px;
+}
+.task_stop_dialog_box{
+    display: none;
+}
+.creative_stop_dialog_box{
+    display: none;
+}
+
+.taskTips tr td {
+    border: 1px solid #cccccc;
+    padding: 2px 2px;
+    word-break: break-all;
+}
+
+/****************************添加微信文案*********************************************/
+.phoneVersion{
+    padding-left:0px!important;
+    background: #fcfcfc;
+}
+.phoneVersionSystem{
+    vertical-align:-2px;
+    margin-right:3px;
+}
+.phoneVersionLable{
+    margin-right:10px;
+    padding:3px
+}
+.weixinBtnSumbit{
+    padding-left:143px;
+    margin-top:20px;
+}
+.weixinBtnSumbit a{
+    margin-right:10px
+}
+.addWenanH2{
+    font-size:18px;
+    color:#1371b9;
+    border-bottom:2px solid #ddd;
+    padding-bottom:3px;
+}
+.addWenanTextarea{
+    height: 92px;
+    width:450px!important
+}
+.addWenanUl li{
+    margin-right:8px;
+    list-style: none;
+}
+.AddwenanImg{
+    overflow:hidden;
+    height:200px;
+    border:1px solid #ddd
+}
+.ChoiceWeixinStepBtn{
+    background:url(images/AddWeixinBtn.jpg) no-repeat;
+    width:200px;
+    height:53px;
+    display:inline-block;
+}
+.ChoiceWeixinStepBtn1{
+    background-position:0px 0px;
+}
+.ChoiceWeixinStepBtn2{
+    background-position:0px -66px;
+    margin-left:51px;
+}
+.weixinWenanView{
+    background:#FFF;
+}
+/*微信选择模板*/
+.ChoiceTemplateBtn1{
+    background-position:0px -133px;
+}
+.ChoiceTemplateBtn2{
+    background-position:0px -200px;
+}
+.ChoiceTemplateCase{
+    border:1px solid #f5f6fa;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -khtml-border-radius: 4px;
+    border-radius: 4px;
+    padding:9px;
+    width:180px;
+    position:relative;
+    margin-top:21px;
+}
+.ChoiceTemplateTop{
+    position:absolute;
+    top:-10px;
+    left:40%;
+    width:20px;
+    height:10px;
+    background:url(images/weixinSanjiao.jpg);
+}
+.ChoiceTemplateBox{
+    width:202px
+}
+.ChoiceTemplateBoxLeft{
+    margin-left:86px
+}
+.ChoiceTemplateBoxRight{
+    margin-left:51px;
+}
+
+.img_upload .upload_item_link {
+    width: 122px;
+    height: 72px;
+    line-height: 70px;
+}
+.img_upload .upload_item_link img{
+    max-height: 70px;
+    max-width: 120px;
+    _width:120px;
+    _height:70px;
+    vertical-align: middle;
+}
+
+.campaignTable textarea {
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    padding: 4px;
+    font-size: 13px;
+}
+
+.campaignTable label {
+    color: gray;
+    font-size: 12px;
+    line-height: 14px;
+    display: inline-block;
+}
+
+.add_active .pNew {
+    color: #666;
+    font-size: 12px;
+    text-indent: 0px;
+    line-height: 20px;
+    margin-bottom: 1em;
+    margin-top: 0;
+}
+.add_active ul{
+    margin-bottom: 0;
+    margin-top: 0;
+}
+/****************************添加微信文案end*********************************************/
+
+/* 文案列表 链接类型 start */
+.creativeLPT_l{
+    width: 60%;
+    float: left;
+    padding-bottom: 10px;
+}
+
+.creativeLPT_r{
+    width: 35%;
+    float: left;
+    margin-left: 5px;
+    padding-bottom: 10px;
+}
+/* 文案列表 链接类型 end */
+/****************************添加微信文案end*********************************************/
+
+.task_landing_type_confirm{
+    line-height: 25px;
+    font-size: 12px;
+}
+.task_landing_type_confirm p{
+    margin: 0;
+    padding: 0;
+}
+.task_landing_type_confirm p.tips{
+    padding-bottom: 10px;
+    color: #F00;
+}
+.task_landing_type_confirm .download_type{
+    width: 265px;
+}
+
+.normal_label{
+    text-transform: none;
+    font-weight: normal;
+}

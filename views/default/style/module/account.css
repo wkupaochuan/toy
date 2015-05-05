@@ -1,0 +1,33 @@
+.account_weiboyi_price,
+.account_media_price{
+    background: url("images/icon/icon_price_weiboyi.gif") no-repeat left center;
+    padding-left:21px;
+    margin: 4px 0;
+    text-align: left;
+    position: relative;
+}
+.account_media_price{
+    background: url("images/icon/icon_price_media.gif") no-repeat left center;
+}
+
+.reservationPrice_table,.priceTable{
+
+}
+.reservationPrice_table th,.reservationPrice_table td,.priceTable th,.priceTable td{
+    background-color: #e4f2ff!important;
+    border: 1px solid #fff;
+    padding:0 3px;
+    color:#333!important;
+}
+.reservationPrice_table td,.priceTable td{
+    background-color: #eef4f4!important;
+}
+.priceTable td{
+    text-align: center;
+}
+table.stylized td .priceTable th,table.stylized td .priceTable td{
+    background-color: #e4f2ff!important;
+    border: 1px solid #fff;
+    padding:0 3px;
+    color:#333!important;
+}

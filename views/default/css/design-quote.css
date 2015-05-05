@@ -1,0 +1,53 @@
+@CHARSET "UTF-8";
+#form_addcompanyinfo {width:1000px;margin:0 auto}
+#form_addcompanyinfo dt{float:left;width:120px;text-align:right;height:30px;line-height:30px;}
+#form_addcompanyinfo dd{float:left;width:350px;line-height:30px;}
+#form_addcompanyinfo dd.data select{width:300px;}
+#form_addcompanyinfo dd.data input{width:300px;}
+#form_addcompanyinfo dd.data textarea{width:300px;}
+#save{width:60px;}
+
+#form_addquote{width:1000px;margin:0 auto; padding-top: 20px; padding-bottom: 20px;}
+#form_addquote table th{ text-align: right}
+#form_addquote table th, #form_addquote table td{height:30px; line-height: 29px;}
+#form_addquote table .creatingQuote_input {
+    border: 1px solid #C8C8C8;
+    height: 24px;
+    line-height: 24px;
+    margin: 5px 5px 0;
+    vertical-align: middle;
+    width: 305px;
+}
+#form_addquote table .pointer {
+    cursor: pointer;
+}
+#form_addquote table .creatingQuote_radio {
+    margin: 0 2px 0 9px;
+    vertical-align: middle;
+}
+.creatingQuoteTable tr td textarea {
+    border: 1px solid #C8C8C8;
+    height: 92px;
+    margin: 5px 0 5px 5px;
+    vertical-align: middle;
+    width: 305px;
+}
+.asterisk_icon {
+    display: inline-block;
+    vertical-align: middle;
+}
+.margin_t10 {
+    margin-top: 5px;
+}
+.col_level1A {
+    color: #FF0000;
+}
+.creatingQuote_btn01 {
+    cursor: pointer;
+    display: block;
+    height: 30px;
+    margin-top: 20px;
+    margin-left:155px;
+    text-align: center;
+    width: 121px;
+}

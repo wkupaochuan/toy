@@ -5,7 +5,9 @@
 <title>{$backend_title}----Powered By TOY</title>
 <base href="{$base_url}" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" href="images/admin.css" />
+<link rel="stylesheet" href="css/admin.css" />
+<link rel="stylesheet" href="css/custom.css" />
+<link rel="stylesheet" href="css/style.css" />
 
 <script type="text/javascript" src="js/lib/seajs/sea.js"></script>
 <script type="text/javascript" src="js/jquery.js"></script>
@@ -26,12 +28,28 @@
                 , plupload: 'lib/plupload/plupload_cmd.js'
                 , fancybox: 'lib/fancybox/fancybox_cmd.js'
                 , image_scale: 'lib/image_scale/image_scale_cmd.js'
+                , weiboyi: 'lib/weiboyi/weiboyi.all.js'
+                , doT: 'lib/doT/doT_cmd.js'
             }
             , debug: true
         });
 
         seajs.use('default/default_table', function(detail){
             detail.init();
+        });
+
+        seajs.use('rest');
+        seajs.use('fancybox');
+        seajs.use('image_scale');
+        seajs.use('plupload');
+        seajs.use('validate');
+
+
+        var Weiboyi, W;
+        seajs.on('exec', function(data) {
+            if (data.uri === seajs.resolve('weiboyi')) {
+                Weiboyi = W = data.exports;
+            }
         });
 
     </script>

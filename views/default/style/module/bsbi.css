@@ -1,0 +1,45 @@
+
+label {font-variant: normal;text-transform: none;}
+.sale_checkbox_item {float:left; width: 6em;margin:0;}
+.sale_checkbox_item_2 {width:12em;}
+.sale_checkbox_item_3 {width:18em;}
+.sale_checkbox_item_4 {width:26em;}
+
+.sale_check_box {margin:0;}
+
+.order_type_checkbox {}
+.order_type_label {width:2em; margin-right:2em;}
+
+.order_status_checkbox {}
+.order_status_label {width:4em; margin-right:1em;}
+
+.confirm_btn {float:right;}
+
+.ui-tabs .ui-tabs-nav li.ui-state-active a {
+	text-decoration:none;
+	padding-top: 6px;
+    background: #f2f2f2 !important;
+    color: #2A7AD2 !important;
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+    border-color: #2A7AD2;
+}
+
+.ui-tabs .ui-tabs-nav li.ui-state-active {
+    background: #f2f2f2 !important;
+    padding-bottom: 2px;
+    border-color: white;
+}
+
+.ui-tabs .ui-tabs-nav {
+    background-color:#5D9ADF;
+    background: -webkit-gradient(linear,left bottom, left top, color-stop(0.2, rgb(80,146,220)), color-stop(0.8, rgb(107,163,226)));
+    background: -moz-linear-gradient(center bottom, rgb(80,146,220) 20%, rgb(107,163,226) 80%);
+    border-color: #2A7AD2;
+}
+
+.weibo_type_checkbox_container {float:left; width:8em;}
+.ui-tabs-panel {min-height:426px;}
+#chartTabs .loading {
+    background: url("/style/css/images/loading.gif") no-repeat center center;
+}

@@ -1,0 +1,95 @@
+.map{
+    width: 328px;
+    height: 292px;
+    position: relative;
+    border:1px solid #f00;
+    margin:0 auto;
+
+}
+.map img{
+    width:66px;
+    height: 66px;
+}
+.map .subMap{
+    position: absolute;
+}
+.map .subMap_center{
+    left:50%;
+    top:50%;
+    width: 66px;
+    height: 66px;
+    margin-left:-33px;
+    margin-top:-33px;
+    position: absolute;
+    z-index: 10;
+}
+.map .subMap01,.map .subMap05{
+    position: absolute;
+    width: 114px;
+    height: 103px;
+    background:url("images/zuoxie.png") no-repeat transparent 62px 33px;
+    left: 18px;
+    top: 18px;
+    z-index: 3;
+}
+.map .subMap05{
+    left: 196px;
+    top: 176px;
+    padding-left:40px;
+    padding-top: 36px;
+    background-position: -51px -61px;
+}
+.map .subMap02{
+    position: absolute;
+    width: 67px;
+    height: 95px;
+    background:url("images/shu.png") repeat-y 29px;
+    left: 134px;
+    top: 18px;
+    z-index: 3;
+}
+.map .subMap06{
+    position: absolute;
+    width: 67px;
+    height: 64px;
+    background:url("images/shu.png") repeat-y 29px;
+    left: 134px;
+    top: 179px;
+    z-index: 3;
+    padding-top:31px
+}
+.map .subMap04,.map .subMap08{
+    position: absolute;
+    width: 66px;
+    height: 64px;
+    background:url("images/heng.png") repeat-x 29px;
+    left: 197px;
+    top: 112px;
+    z-index: 3;
+    padding-left:40px;
+}
+.map .subMap08{
+    background:url("images/heng.png") repeat-x 29px;
+    left: 19px;
+    padding-left:0;
+    width: 111px;
+}
+.map .subMap03,.map .subMap07{
+    position: absolute;
+    width: 96px;
+    height: 103px;
+    background: url("images/youxie.png") no-repeat transparent -27px 68px;
+    left: 197px;
+    top: -31px;
+    z-index: 3;
+    padding-left: 39px;
+    padding-top:50px
+}
+.map .subMap07{
+    width: 120px;
+    left:20px;
+    top:112px;
+    background: url("images/youxie.png") no-repeat  65px 0;
+    padding:0;
+    padding-top:96px
+}

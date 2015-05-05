@@ -2,12 +2,8 @@
 define(function(require, exports, module) {
 
     require('validate');
-    require('rest');
     require('plupload');
-    require('fancybox');
-    require('image_scale');
-    require('lib/xiaomili/xiaomili.util.js');
-
+    require('weiboyi');
 
     processValidate();
     processUploadStoryCover('');
@@ -29,8 +25,8 @@ define(function(require, exports, module) {
         var request = $.restPost('/story/index/add_new_story', params);
 
         request.done(function(msg, data) {
-//            W.message('操作成功！', 'success', function(){
-//            });
+            W.message('操作成功！', 'success', function(){
+            });
         });
 
         request.fail(function(msg) {

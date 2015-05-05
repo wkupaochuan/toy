@@ -2,7 +2,7 @@ define('plupload', function(require) {
     var plupload = require('plupload_full');
     require('./uploadimages.css');
 
-    var W = require('lib/xiaomili/xiaomili.util.js');
+    var W = require('lib/weiboyi/weiboyi.util.js');
     var alertMsg = W.alert ? W.alert : window.alert;
 //    var alertMsg = window.alert;
 

@@ -1,0 +1,216 @@
+.showdiv{
+	position:absolute; z-index:101;
+	}
+.topleft
+{
+	background:url(topleft.gif);
+	width:11px; 
+	height:26px;
+	float:left;
+	font-size:0px;
+}
+.topmiddle{
+	height:26px;
+	float:left;
+	background:url(topxian.gif);
+}
+.topright
+{
+	background:url(topright.gif);
+	width:9px;
+	height:26px;
+	float:left;
+	font-size:0px;
+}
+.clear{ clear:both; font-size:0px;}
+.middleleft{
+	background:url(leftxian.gif);
+	width:4px;
+	float:left;
+}
+.middlemiddle{float:left;}
+.middleright{
+	background:url(rightxian.gif);
+	width:4px;
+	float:left;
+}
+.endleft{
+	background:url(endleft.gif);
+	width:11px;
+	height:8px;
+	float:left;
+	font-size:0px;
+}
+.endmiddle{
+	background:url(endxian.gif);
+	float:left;
+	height:8px;
+	font-size:0px;
+}
+.endright{
+	background:url(endright.gif);
+	width:9px;
+	height:8px;
+	float:left;
+	font-size:0px;
+}
+/**禁止假货**/
+.qv-imgs {
+	z-index:11000;
+	background-color:#fff;
+	position:fixed !important;
+	clear:both; overflow:hidden; border:1px #ccc solid;  top:0px; right:0px; 
+	_position:absolute;   _top: expression( eval( document.documentElement.scrollTop + document.documentElement.clientHeight - this.offsetHeight - (parseInt(this.currentStyle.marginTop,10)||0) - (parseInt(this.currentStyle.marginBottom,10)||0) ) - (parseInt(this.currentStyle.bottom,10)||0) ); 
+}
+.qv-img {
+	z-index:11000;
+	position:absolute;
+	background-color: #fff;
+	margin:0 auto;
+	top:0px;right:0px;
+}
+/**禁止假货 end**/
+
+/*质检投诉弹出框 开始*/
+.complaint_grounds, .complaints_reason, .dismissed_reason, .quality_inspection_results, .quality_inspection_processing {
+	width:260px;
+	border:1px solid #1371b9;
+	background:#fafafa;
+}
+.complaint_grounds{
+	width:346px;
+}
+.complaint_grounds h2, .complaints_reason h2, .dismissed_reason h2, .quality_inspection_results h2, .quality_inspection_processing h2 {
+	position:relative;
+	font-size:12px;
+	background:#1371b9;
+	height:30px;
+	line-height:30px;
+	padding-left:10px;
+	color:#fff;
+}
+.complaint_grounds {
+	display:none;
+	position:absolute;
+	z-index:10000;
+}
+.complaint_grounds #qc_note_message{
+	color:#ff0000;
+}
+.complaint_grounds .upload_btn #divFileProgressContainer{
+	height:35px;
+	width:360px;
+}
+.complaint_clean{
+	margin-left:15px;
+}
+.complaint_grounds .upload_btn{
+	width: 66px; 
+	height:18px;
+	margin-right:7px;
+	background:url('/img/shangchuan.jpg') no-repeat; 
+	padding: 2px; 
+	float: left;
+}
+.complaint_grounds .upload_div{
+	width:340px;
+	padding-left:20px;
+}
+.complaint_grounds h2{
+	margin:0px;
+}
+.complaint_grounds h3 {
+	padding-left:10px;
+	height:40px;
+	line-height:40px;
+}
+.complaint_grounds h3 a {
+	display:inline-block;
+	background:url(../img/attention_btn.jpg) no-repeat;
+	width:67px;
+	height:24px;
+	line-height:24px;
+	text-align:center;
+	color:#fff;
+}
+.complaint_grounds h3 span {
+	font-weight:normal;
+	margin-left:5px;
+}
+.complaint_grounds a.complaint_grounds_shut {
+	position:absolute;
+	top:-2px;
+	right:9px;
+	color:#fff;
+	cursor:pointer;
+}
+.complaint_grounds a.complaint_grounds_shut:hover {
+	color:#FF6600;
+}
+.complaint_grounds ul {
+	padding:20px 30px;
+}
+.complaint_grounds ul li{
+	display:block;
+}
+.complaint_grounds ul li label {
+	line-height:24px;
+	cursor:pointer;
+	color:#666;
+}
+.complaint_grounds ul li label input {
+	margin-right:5px;
+	cursor:pointer;
+	vertical-align:middle;
+}
+.complaint_grounds textarea {
+	margin-left:20px;
+	display:block;
+	padding:5px;
+	padding-right:0;
+	line-height:20px;
+	width:266px;
+	height:80px;
+	color:#666;
+	font-size:12px;
+}
+.complaint_grounds p {
+	margin-left:20px;
+}
+.complaint_grounds_btns {
+	border-top:1px solid #ccc;
+	text-align:center;
+	padding:10px 0;
+	margin-top:5px;
+}
+
+/*质检投诉弹出框 结束*/
+/*打款申请-申请记录页面*/
+.inputStyle {
+	width:80px;
+}
+#section{
+	width: 100%;
+	margin: 5px 0;
+}
+#apply-list-form{
+	overflow: visible;
+}
+.titleStyle{
+	color: yellow; 
+	font-size: 12px;
+}
+.wrapper div.down span{
+	float: right; 
+	margin: 28px 5px 3px 0;
+	color :   yellow;
+}
+.wrapper div.down{
+	margin: 5px 0 0 15px;
+}
+
+.pagediv{
+	float:right;
+}
+/*打款申请-申请记录页面end*/
+	

@@ -1,0 +1,32 @@
+@charset "utf-8";
+/* "dar" stands for "Data-img Analysis Result" */
+
+.dar_cell {
+
+}
+
+.dar_cell .dar_field {
+    font-style: italic;
+}
+
+.dar_summary {
+    margin:5px 0 0;
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+.dar_cell ul {
+    margin:5px 0 0;
+}
+
+.dar_cell li {
+    margin: 0 0 0 -12px;
+    padding: 0;
+    list-style: inside square;
+    text-align: left;
+}
+
+/* td fatal error */
+.dar_summary_level_5 {
+    color: red !important;
+}

@@ -1,0 +1,104 @@
+@charset "utf-8";
+/*查看链接点击统计弹出框 开始*/
+.StatisticsBox {
+	border-bottom:2px solid #c84d01;
+	width:293px;
+	height:auto;
+	left:73.5%;
+	background:url(../img/bloger_bg2.gif) center 1px no-repeat;
+	padding-top:12px;
+	z-index:1000;
+}
+.StatisticsBox h3 {
+	position:relative;
+	width:291px;
+	height:30px;
+	line-height:30px;
+	margin:0;
+	font-size:14px;
+	color:#666;
+	border-bottom:1px solid #C84D01;
+	border-left:1px solid #C84D01;
+	border-right:1px solid #C84D01;
+	text-align:center;
+}
+.StatisticsBox h3 a {
+	position:absolute;
+	top:1px;
+	right:5px;
+	color:#3383C1;
+	font-weight:normal;
+	font-size:12px;
+}
+.StatisticsBox table {
+	width:293px;
+	background:#fff;
+	border-left:1px solid #C84D01;
+	border-right:1px solid #C84D01;
+}
+.StatisticsBox table tr td {
+	height:28px;
+	line-height:28px;
+}
+.StatisticsBox table tr td.StatisticsBox_totle{
+ text-align:right;
+ padding-right:5px;
+}
+.StatisticsBox table tr td.StatisticsBox_borderBottom{
+	border-bottom:1px solid #ccc;
+}
+.StatisticsBox table tr td.StatisticsBox_borderRight{
+}
+.StatisticsBox table tr td.StatisticsBox_borderRight b{
+	display:inline-block;
+	width:220px;
+	border-right:1px solid #ccc;
+}.StatisticsBox table tr td.StatisticsBox_borderTop{
+	border-top:1px solid #C84D01;
+}
+.StatisticsBox table tr td a {
+	display:inline-block;
+	width:220px;
+	color:#3383C1;
+	border-right:1px solid #ccc;
+}
+.StatisticsBox table tr td a:hover{ text-decoration:underline;}
+.StatisticsBox table tr td b{ text-align:center;}
+/*查看链接点击统计弹出框 结束*/
+/*短链接查询框 开始*/
+.shortLinkBox{
+    background: none repeat scroll 0 0 #F7F8F8;
+    border: 1px solid #6BA3CE;
+		border-top:none;
+    position: relative;
+    width: 693px;
+		float:left;
+}
+.shortLinkBox p{
+    margin: 10px 0 12px 12px;
+}
+.shortLinkBox p.shortLinkBox_p span{
+	display:inline-block;
+	width:100px;
+}
+.shortLinkBox p.shortLinkBox_p span b{
+	font-weight:normal;
+	color:#ff0000;
+}
+.shortLinkBox p input{
+    border: 1px solid #B2DBFB;
+    color: #666666;
+    cursor: pointer;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 5px;
+    vertical-align: middle;
+    width: 550px;
+}
+.shortLinkBox p a{
+	margin-left:10px;
+	display:inline-block;
+	height:30px;
+	vertical-align:middle;
+}
+/*短链接查询框 开始*/

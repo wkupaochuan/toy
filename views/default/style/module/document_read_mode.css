@@ -1,0 +1,105 @@
+.read_mode .read_mode_content {
+    display: block;
+}
+
+.read_mode_content {
+    display: none;
+}
+
+.read_mode .edit_mode_content {
+    display: none;
+}
+
+.read_mode .documentTable input, .read_mode .documentTable textarea, .read_mode .documentTable select {
+    border: none;
+    box-shadow: none;
+    line-height: 20px;
+    /*width: 300px;*/
+    overflow-y:visible;
+    height: auto;
+    font-family: 'microsoft yahei';
+}
+.read_mode .documentTable input{
+    width: 120px;
+}
+.read_mode .documentTable input.inputXXLarge{
+    width: 550px;
+}
+.read_mode .documentTable .validateItem {
+    display: none;
+    height: auto;
+    line-height: 20px;
+}
+
+.read_mode .documentTable .button {
+    display: none;
+}
+
+.read_mode .documentTable select {
+    background: transparent;
+    width: 320px;
+    position: absolute;
+    clip: rect(0 35 0 0);
+    clip: rect(0px, 298px,36px,0px);
+    font-family: 'microsoft yahei';
+
+}
+.read_mode .documentTable div.multiple_price_box select{
+    width: auto;
+    position: inherit;
+}
+
+.read_mode .documentTable input[type=radio] {
+    display: none;
+}
+
+.read_mode .documentTable {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.Chapter table.documentTable{
+    width:1200px;
+}
+.read_mode .documentTable {
+    margin: 0;
+}
+.read_mode .documentTable th, .read_mode .documentTable td {
+    width: auto;
+}
+.documentTable td{
+    word-break: break-all;
+    word-wrap: break-word
+}
+.read_mode .documentTable th, .read_mode .documentTable td {
+    line-height: 32px;
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+}
+
+.read_mode .documentTable tr th {
+    width:150px;
+    line-height: 32px;
+    vertical-align: top;
+    font-weight: bold;
+    white-space: nowrap;
+    font-size:12px;
+}
+
+.read_mode .documentTable .requireditem th span {
+    background: none;
+}
+
+.read_mode .validateIcon {
+    background: none;
+}
+pre.read_mode_textarea{
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-family: 'microsoft yahei';
+}
+.read_mode .documentTable .td_multi-line{
+  padding-top: 5px;
+}
+

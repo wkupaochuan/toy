@@ -1,0 +1,30 @@
+@CHARSET "UTF-8";
+#dialog-form dt,dd{
+float: left;
+display: block;
+}
+#dialog-form dt{
+width: 85px;
+line-height: 20px;
+text-align:center;
+}
+#dialog-form dd{
+
+}
+#dialog-form dl{
+width: 420px;
+float: left;
+margin: 2px 0 ;
+}
+#dialog-form select{
+width: 300px;
+
+}
+#dialog-form input,textarea {
+	width: 300px;
+	height: 60px;
+	width: 300px;
+}
+#dialog-form input {
+height: 20px;
+}

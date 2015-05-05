@@ -1,0 +1,123 @@
+.detail_accountList_table tr td {
+    padding: 10px 0;
+}
+
+.big_test_area {
+    width: 500px;
+    height: 150px;
+}
+
+.test_area{
+    width: 300px;
+}
+
+.area {
+    border: 1px solid;
+    margin-left: 10px;
+}
+
+.area_title {
+    padding: 0 6px 0 10px;
+    color: #000000;
+    font-size: large;
+    margin-left: 20px;
+}
+
+.lable {
+    text-align: right;
+    vertical-align: middle;
+    width: 115px;
+}
+
+.pack_attribute {
+    width: 16px;
+    height: 11px;
+    background: url("images/pack_attribute.png") no-repeat ;
+}
+.documentTable .error_prompt{
+    border:1px solid #f00;
+}
+.radio_error_prompt,.radio_wrap,.textarea_error_prompt{
+    border:1px solid #fff;
+    padding: 2px;
+    margin-right: 4px;
+    display: inline-block;
+}
+
+.creative_make_table textarea.radio_error_prompt{
+    border:1px solid #f00;
+}
+.textarea_error_prompt{
+    display: block;
+}
+.reservation_pack_main a:hover{
+    text-decoration: none;
+}
+
+.creative_make_table td {
+    vertical-align: top;
+    line-height: 27px;
+}
+.pack_area_id_td{
+    white-space: nowrap;
+}
+.pop_boxArticle_content{
+    line-height: 21px;
+    padding: 6px 10px;
+    margin-bottom: 20px;
+    color: #666;
+}
+.pop_boxArticle_content ol,.pop_boxArticle_content ul{
+    list-style-position: inside;
+}
+
+
+
+.creative_make_table #full_introduction{
+    width: 100%;
+}
+.pack_setting_table{
+    width: 516px;
+    background-color: #fff;
+    border:1px dashed #d1d1d1;
+}
+.pack_setting_table th{
+    background-color: #fffff5;
+    text-align: left;
+    padding:0
+}
+.pack_setting_table td{
+    padding-left: 0;
+}
+.pack_setting_table_weeks{
+    margin-right: 16px;
+
+}
+.pack_setting_table_weeks input{
+    vertical-align: -2px
+}
+.pack_setting_table select{
+    margin-right: 4px;
+    width: 60px;
+    height: 26px;
+}
+.pack_setting_table label input[type=radio]{
+    vertical-align: -4px!important;
+}
+.pack_setting_table_wrap{
+    margin-top: 10px;
+}
+.pack_setting_table_weeks_wrap{
+    background-color: #fffff0;
+    padding:4px 0;
+    padding-left:21px
+}
+.validate_item td,.validate_item th{
+    padding:4px 4px;
+}
+.validate_item th{
+    vertical-align: top;
+}
+.validate_item th{
+
+}

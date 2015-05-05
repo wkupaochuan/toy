@@ -5,7 +5,7 @@
 <base href="<?php echo base_url().'views/'.setting('backend_theme').'/'; ?>" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title><?php echo setting('backend_title');  ?>----Powered By TOY</title>
-<link rel="stylesheet" href="images/admin.css"  type="text/css" />
+<link rel="stylesheet" href="css/admin.css"  type="text/css" />
 </head>
 <body id="login">
 	<div class="container">

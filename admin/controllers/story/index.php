@@ -14,7 +14,17 @@ class Index extends  Admin_Controller{
      */
     public function home()
     {
-        $array_story_list = $this->story_service->get_story_list();
+        $array_story_list = $this->story_service->get_story_list(array());
+        $this->assign('storys', $array_story_list);
+        $this->display('story/story_list.php');
+    }
+
+    /**
+     * 获取故事列表
+     */
+    public function get_story_list()
+    {
+        $array_story_list = $this->story_service->get_story_list(array());
         $this->assign('storys', $array_story_list);
         $this->display('story/story_list.php');
     }
@@ -74,8 +84,8 @@ class Index extends  Admin_Controller{
 
         $array_new_story = array(
             'story_title' => $array_params['story_title']
-            , 'story_cover' => $array_params['story_cover']
-            , 'story_voice' => $array_params['story_voice']
+        , 'story_cover' => $array_params['story_cover']
+        , 'story_voice' => $array_params['story_voice']
         );
 
         $res = $this->story_service->add_new_story($array_new_story);

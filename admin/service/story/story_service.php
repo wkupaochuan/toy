@@ -8,14 +8,16 @@ class Story_service extends MY_Service{
         $this->load->model('story/story_model');
     }
 
-
     /**
      * 获取故事列表
+     * @param $condition
+     * @param null $limit
+     * @param null $offset
      * @return mixed
      */
-    public function get_story_list()
+    public function get_story_list($condition, $limit = null, $offset = null)
     {
-        $array_story_list = $this->story_model->get_sotry_list();
+        $array_story_list = $this->story_model->get($condition, $limit, $offset);
         return $array_story_list;
     }
 

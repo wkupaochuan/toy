@@ -1,0 +1,53 @@
+@charset "utf-8";
+.account {
+	font-family: Arial, Helvetica, sans-serif;
+}
+.account_h2{
+	font-weight:normal;
+	padding:10px 0px;
+	margin:0px;
+	}
+.account_menu{
+	list-style:none;
+	overflow:hidden;
+	border-right:1px solid #dddddd;
+	margin:0px;
+	padding:0px;
+	float:left;
+	width:705px;
+	}
+.account_menu li{
+	float:left;
+	height:35px;
+	}
+.account_menu li a{
+	display:block;
+	float:left;
+	padding:0px 10px;
+	border-left:1px solid #dddddd;
+	color:#333;
+	text-decoration:none;
+	background:url('/img/account_bg.gif') repeat-x;
+	height:34px;
+	line-height:34px;
+	color:#0f6aa9
+	}
+.account_menu li a:hover{
+	border-bottom:none;
+	background:url(img/account_bg.gif) repeat-x 0px -35px;
+	color:#333;
+	}
+.account_txt_date{
+	width:185px;
+	height:24px;
+	line-height:24px;
+	padding-left:3px;
+	background:url(img/date.gif) no-repeat 165px 5px;
+	background-color:#FFF;
+	vertical-align:middle;
+	}
+.account_date_tip{
+	padding-left:10px;
+	padding-top:10px;
+	clear:both;
+	}

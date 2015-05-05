@@ -1,0 +1,973 @@
+@charset "utf-8";
+/*颜色分类*/
+.col_level1A {
+	color:#ff0000; /*红色*/
+}
+.col_level1B {
+	color:#ff6c00;/*橙色*/
+}
+.col_level2A {
+	color:#b11993;/*紫色*/
+}
+.col_level2B {
+	color:#1366a3;/*蓝色*/
+}
+.col_level2C {
+	color:#0f9ca5;/*浅绿色*/
+}
+.col_level2D {
+	color:#009b59;/*绿色*/
+}
+.col_level2E {
+	color:#b5ab0f; /*土黄色*/
+}
+.col_level3A {
+	color:#666;/*深灰色*/
+}
+.col_level3B {
+	color:#acacac;/*银色*/
+}
+.col_level3C {
+	color:#999;/*灰色*/
+}
+.col_level3D {
+	color:#f4f4f4;/*浅灰色*/
+}
+.col_level4A {
+	color:#fff;/*白色*/
+}
+.warningColor {
+    color: #f30!important;
+    font-size: large!important;
+}
+/*字体*/
+.font_blod {
+	font-weight:bold;
+}
+.normal_size{
+    font-size:12px;
+}
+.middle_size{
+    font-size: 14px;
+}
+.large_size{
+    font-size:16px;
+}
+/*变手型*/
+.pointer {
+	cursor:pointer;
+}
+/*不变手型*/
+.no_pointer {
+	cursor:default;
+}
+/*去除边框*/
+.clearBorder {
+	border:none;
+}
+.clearBorderRight {
+	border-right:none;
+}
+/*鼠标滑过有下划线*/
+.under_line:hover {
+	text-decoration:underline;
+}
+/*转化成块元素*/
+.d_b {
+	display:block;
+}
+/*按钮样式*/
+.btn01 {
+	overflow:hidden;
+	height:42px;
+}
+.btn01 span {
+	float:left;
+	height:42px;
+	width:6px;
+	background:url(images/btn01_corner.jpg) no-repeat;
+}
+.btn01 span.btn01_cr {
+	background-position:right 0;
+}
+.btn01 a {
+	float:left;
+	padding:0 10px;
+	height:42px;
+	line-height:42px;
+	color:#fff;
+	font-size:16px;
+	font-weight:bold;
+	background:url(images/btn01_bg.jpg) repeat-x;
+}
+/*表格通用样式*/
+.tableList {
+	width:100%
+}
+.tableList_a {
+	text-align:left;
+}
+.tableList_a:hover {
+	text-decoration:underline;
+}
+.tableList_span {
+	padding:0 2px;
+}
+.main table .tableHeadbg th {
+	border-bottom:1px solid #cccfd4;
+	border-top:3px solid #4E9BCF;
+	background:#e7ecf2 url(images/tableList_bg01.jpg) no-repeat right bottom;
+	height:38px;
+	line-height:38px;
+	font-size:14px;
+	color:#414141;
+	padding-left:3px;
+}
+.main table.tableList td {
+	padding-left:3px;
+	height:38px;
+	border-bottom:1px dashed #D8D8D8;
+}
+.main table.tableList td.tableList_tdWidth01 {
+	width:86px;
+}
+.main table.tableList td.tableList_tdWidth02 {
+	width:84px;
+}
+.refusedClick {
+	color:#999;
+}
+.refusedClick:hover {
+	text-decoration:none;
+}
+.main table .tableHeadbg th.clearBgImg {
+	background-image:none;
+}
+.microBloggersInfo {
+	padding:3px 0;
+}
+/*鼠标hover 整行变色*/
+.changeBgColor tr:hover td{
+    background-color: #D9F7FF;
+}
+/*弹出框删除提示样式*/
+.overlayTipsBox {
+	margin:0 auto;
+	width:400px;
+	background:#fff;
+	padding:25px 10px;
+	text-align:center;
+}
+.overlayTipsBox img {
+	display:inline-block;
+	margin-right:15px;
+	vertical-align:middle;
+}
+.overlayTipsBox span {
+	display:inline-block;
+	vertical-align:middle;
+	max-width:320px;
+	-width:320px;
+	font-size:14px;
+	line-height:18px;
+	text-align:left;
+}
+.overlayTipsBox span b {
+	font-size:18px;
+}
+.overlaySucceedBox {
+	width:222px;
+}
+.overlaySucceedBox span {
+	width:150px;
+	max-height:150px;
+}
+/*悬浮框 样式*/
+.suspendedBox01 {
+	padding:16px;
+	line-height:20px;
+	background:#fffff2;
+}
+.suspendedBox01 b {
+	color:#ff0000;
+}
+.suspendedBox02 {
+	width:220px;
+}
+/*悬浮框 表格样式*/
+.suspendedTableBox {
+	width:370px;
+}
+.suspendedTableContent {
+	width:100%;
+	background:#fffff2;
+}
+.suspendedTableContent tr td {
+	height:30px;
+	line-height:30px;
+	text-align:center;
+	border-bottom:1px dotted #cdcdcd;
+	border-right:1px dotted #cdcdcd;
+}
+.suspendedTableContent tr td.clearBorderRight {
+	border-right:none;
+}
+.suspendedTableContent tr td.clearBorderBottom {
+	border-bottom:none;
+}
+/*纯文本框*/
+.text_box {
+	width:153px;
+	height:25px;
+	padding-left:3px;
+	line-height:25px;
+	border:none;
+	font-size:12px;
+	background:none;
+	background:#fff;
+	color:#666;
+	border:1px solid #dedede;
+	font-family:'微软雅黑', '宋体';
+}
+/*纯文本框 右边没有边框的*/
+.text_box01 {
+	width:150px;
+	height:25px;
+	padding-left:3px;
+	line-height:27px;
+	border:none;
+	font-size:12px;
+	margin-left:10px;
+	background:none;
+	background:#fff;
+	color:#666;
+	border:1px solid #dedede;
+	border-right:none;
+	margin-top:7px;
+	font-family:'微软雅黑', '宋体';
+}
+.text_box02 {
+	width:70px;
+	height:25px;
+	padding-left:3px;
+	line-height:25px;
+	border:none;
+	background:none;
+	background:#fff;
+	color:#666;
+	border:1px solid #dedede;
+	font-size:12px;
+	font-family:'微软雅黑', '宋体';
+}
+
+
+/*纯文本框 右边没有边框的搜索按钮*/
+.search_img01 {
+	width:34px;
+	height:27px;
+	line-height:27px;
+	vertical-align:-9px;
+	vertical-align:-7px\9;
+	_vertical-align:-4px;
+	cursor:pointer;
+	margin-top:7px;
+	border:none;
+	background:url(images/ss_btn.jpg) no-repeat;
+}
+
+/*文本框之间的横线*/
+.dssh_small {
+	display:block;
+	float:left;
+	margin-top:13px;
+	margin-left:0px;
+	margin-right:3px;
+}
+/*margin右边距*/	
+.margin_r6 {
+	margin-right:6px;
+}
+.margin_r10 {
+	margin-right:10px;
+}
+/*margin上边距*/	
+.margin_t3 {
+	margin-top:3px;
+}
+.margin_t4 {
+	margin-top:4px;
+}
+.margin_t5 {
+	margin-top:5px;
+}
+.m_t5 {
+	*margin-top:5px;
+}
+.m_tt9{
+	_margin-top:9px;
+}
+.margin_t7 {
+	margin-top:7px;
+}
+.margin_t8 {
+	margin-top:8px;
+}
+.margin_t10 {
+	margin-top:10px;
+}
+.margin_t15 {
+	margin-top:15px;
+}
+.margin_t20 {
+	margin-top:20px;
+}
+/*margin左边距*/	
+.margin_l10 {
+	margin-left:10px;
+}
+/*margin下边距*/	
+.margin_b5 {
+	margin-bottom:5px;
+}
+
+
+/*** 通用表单验证提示 start ***/
+.validateInfo {
+	margin-left:5px;
+	background: #FFFFCC;
+	border: 1px solid #FFCC99;
+	display: none;
+	line-height: 19px;
+	padding: 0 4px;
+	color: #999;
+	width: 250px;
+	word-wrap: break-word;
+	word-break: break-all;
+	display: none;
+}
+.validateInfo.validateError {
+	background: url(images/error_tips_icon01.jpg) no-repeat 5px 3px #FFEAEA;
+	border: 1px solid #E5C3C4;
+	display: inline-block;
+	line-height: 19px;
+	text-indent: 20px;
+	color: red;
+}
+.validateInfo.validateSuccess {
+	height: 20px;
+	width: 20px;
+	border: none;
+	background: url(images/validate_success.jpg) no-repeat center center transparent;
+}
+/*** 通用表单验证提示 end ***/
+
+/** 表单通用样式 start **/
+.placeholder {
+	color: #999;
+}
+/** 表单通用样式 end **/
+
+
+
+
+
+
+
+
+
+/*通用按钮样式start*/
+/*橙色*/
+.btn_wrap {
+	cursor: pointer;
+    vertical-align: top;
+}
+
+.btn_mini_strong {
+	display: inline-block;
+	height: 20px;
+	line-height:20px;
+	padding-left:5px;
+}
+.btn_mini_strong .btn_wrap {
+	display: inline-block;
+	padding: 0 13px 0 10px;
+	height: 20px;
+	line-height:20px;
+}
+.btn_small_strong {
+	display: inline-block;
+	height: 26px;
+	line-height:26px;
+	padding-left:5px;
+	font-size:14px;
+}
+.btn_small_strong .btn_wrap {
+	display: inline-block;
+	padding: 0 13px 0 10px;
+	height: 26px;
+	line-height:26px;
+}
+.btn_default_strong {
+	display: inline-block;
+	height:38px;
+	line-height:38px;
+	padding-left:5px;
+	font-size:14px;
+}
+.btn_default_strong .btn_wrap {
+	display: inline-block;
+	padding: 0 13px 0 7px;
+	height:38px;
+	line-height:38px;
+}
+.btn_large_strong {
+	display: inline-block;
+	height:46px;
+	line-height:46px;
+	padding-left:5px;
+	font-size:16px;
+}
+.btn_large_strong .btn_wrap {
+	display: inline-block;
+	padding: 0 13px 0 10px;
+	height:46px;
+	line-height:46px;
+}
+
+/*红色*/
+.btn_mini_warning {
+	display: inline-block;
+	height:20px;
+	line-height:20px;
+	padding-left:5px;
+}
+.btn_mini_warning .btn_wrap {
+	display: inline-block;
+	padding: 0 13px 0 10px;
+	height: 20px;
+	line-height:20px;
+}
+.btn_small_warning {
+	display: inline-block;
+	height: 26px;
+	line-height:26px;
+	padding-left:5px;
+}
+.btn_small_warning .btn_wrap {
+	display: inline-block;
+	padding: 0 13px 0 10px;
+	height: 26px;
+	line-height:26px;
+}
+.btn_default_warning {
+	display: inline-block;
+	height:38px;
+	line-height:38px;
+	padding-left:5px;
+	font-size:14px;
+}
+.btn_default_warning .btn_wrap {
+	display: inline-block;
+	padding: 0 13px 0 10px;
+	height:38px;
+	line-height:38px;
+}
+.btn_large_warning {
+	display: inline-block;
+	height:46px;
+	line-height:46px;
+	padding-left:5px;
+	font-size:16px;
+}
+.btn_large_warning .btn_wrap {
+	display: inline-block;
+	padding: 0 13px 0 10px;
+	height:46px;
+	line-height:46px;
+}
+
+/*蓝色*/
+.btn_mini_important {
+	display: inline-block;
+	height:20px;
+	line-height:20px;
+	padding-left:5px;
+}
+.btn_mini_important .btn_wrap {
+	display: inline-block;
+	padding: 0 13px 0 10px;
+	height:20px;
+	line-height:20px;
+}
+.btn_small_important {
+	display: inline-block;
+	height: 26px;
+	line-height:26px;
+	padding-left:5px;
+	font-size:12px;
+}
+.btn_small_important .btn_wrap {
+	display: inline-block;
+	padding: 0 13px 0 10px;
+	height: 26px;
+	line-height:26px;
+}
+.btn_default_important {
+	display: inline-block;
+	height: 38px;
+	line-height:38px;
+	padding-left:5px;
+	font-size:14px;
+}
+.btn_default_important .btn_wrap {
+	display: inline-block;
+	padding: 0 13px 0 10px;
+	height: 38px;
+	line-height:38px;
+}
+.btn_large_important {
+	display: inline-block;
+	height: 46px;
+	line-height:46px;
+	padding-left:5px;
+	font-size:16px;
+}
+.btn_large_important .btn_wrap {
+	display: inline-block;
+	padding: 0 13px 0 10px;
+	height:46px;
+	line-height:46px;
+}
+
+/*绿色*/
+.btn_mini_less{
+	display: inline-block;
+	height:20px;
+	line-height:20px;
+	padding-left:5px;
+	font-size:14px;
+}
+.btn_mini_less .btn_wrap {
+	display: inline-block;
+	padding: 0 13px 0 10px;
+	height:20px;
+	line-height:20px;
+}
+.btn_small_less{
+	display: inline-block;
+	height: 26px;
+	line-height:26px;
+	padding-left:5px;
+	font-size:14px;
+}
+.btn_small_less .btn_wrap {
+	display: inline-block;
+	padding: 0 13px 0 10px;
+	height: 26px;
+	line-height:26px;
+}
+.btn_default_less{
+	display: inline-block;
+	height: 38px;
+	line-height:38px;
+	padding-left:5px;
+	font-size:14px;
+}
+.btn_default_less .btn_wrap {
+	display: inline-block;
+	padding: 0 13px 0 10px;
+	height: 38px;
+	line-height:38px;
+}
+.btn_large_less{
+	display: inline-block;
+	height: 46px;
+	line-height:46px;
+	padding-left:5px;
+	font-size:14px;
+}
+.btn_large_less .btn_wrap {
+	display: inline-block;
+	padding: 0 13px 0 10px;
+	height:46px;
+	line-height:46px;
+}
+
+/*灰色可点*/
+.btn_mini_normal{
+	display: inline-block;
+	height:20px;
+	line-height:20px;
+	padding-left:5px;
+}
+.btn_mini_normal .btn_wrap {
+	display: inline-block;
+	padding: 0 13px 0 10px;
+	height:20px;
+	line-height:20px;
+}
+.btn_small_normal{
+	display: inline-block;
+	height:26px;
+	line-height:26px;
+	padding-left:5px;
+	font-size:14px;
+}
+.btn_small_normal .btn_wrap {
+	display: inline-block;
+	padding: 0 13px 0 10px;
+	height:26px;
+	line-height:26px;
+}
+.btn_default_normal{
+	display: inline-block;
+	height:38px;
+	line-height:38px;
+	padding-left:5px;
+	font-size:14px;
+}
+.btn_default_normal .btn_wrap {
+	display: inline-block;
+	padding: 0 13px 0 10px;
+	height:38px;
+	line-height:38px;
+}
+.btn_large_normal{
+	display: inline-block;
+	height:46px;
+	line-height:46px;
+	padding-left:5px;
+	font-size:16px;
+}
+.btn_large_normal .btn_wrap {
+	display: inline-block;
+	padding: 0 13px 0 10px;
+	height:46px;
+	line-height:46px;
+}
+
+/*灰色不可点*/
+.btn_mini_disabled {
+	display: inline-block;
+	height:20px;
+	line-height:20px;
+	padding-left:5px;
+	cursor: default;
+}
+.btn_mini_disabled .btn_wrap {
+	display: inline-block;
+	padding: 0 13px 0 10px;
+	height:20px;
+	line-height:20px;
+	cursor: default;
+}
+.btn_small_disabled {
+	display: inline-block;
+	height:26px;
+	line-height:26px;
+	padding-left:5px;
+	font-size:14px;
+	cursor: default;
+}
+.btn_small_disabled .btn_wrap {
+	display: inline-block;
+	padding: 0 13px 0 10px;
+	height:26px;
+	line-height:26px;
+	cursor: default;
+}
+.btn_default_disabled {
+	display: inline-block;
+	height:38px;
+	line-height:38px;
+	padding-left:5px;
+	font-size:14px;
+	cursor: default;
+}
+.btn_default_disabled .btn_wrap {
+	display: inline-block;
+	padding: 0 13px 0 10px;
+	height:38px;
+	line-height:38px;
+	cursor: default;
+}
+.btn_large_disabled {
+	display: inline-block;
+	height:46px;
+	line-height:46px;
+	padding-left:5px;
+	font-size:16px;
+	cursor: default;
+}
+.btn_large_disabled .btn_wrap {
+	display: inline-block;
+	padding: 0 13px 0 10px;
+	height:46px;
+	line-height:46px;
+	cursor: default;
+}
+
+/*橙色按钮*/
+.btn_mini_strong {
+	background:url(images/btn_all.gif) no-repeat 0 0;
+}
+.btn_mini_strong .btn_wrap {
+	background:url(images/btn_all.gif) no-repeat right 0;
+	color: #ffffff;
+}
+.btn_small_strong {
+	background:url(images/btn_all.gif) no-repeat 0 -32px;
+}
+.btn_small_strong .btn_wrap {
+	background:url(images/btn_all.gif) no-repeat right -32px;
+	color: #ffffff;
+}
+.btn_default_strong {
+	background:url(images/btn_all.gif) no-repeat 0 -71px;
+}
+.btn_default_strong .btn_wrap {
+	background:url(images/btn_all.gif) no-repeat right -71px;
+	color: #ffffff;
+}
+.btn_large_strong {
+	background:url(images/btn_all.gif) no-repeat 0 -122px;
+}
+.btn_large_strong .btn_wrap {
+	background:url(images/btn_all.gif) no-repeat right -122px;
+	color: #ffffff;
+}
+
+/*红色按钮*/
+.btn_mini_warning {
+	background:url(images/btn_all.gif) 0 -187px;
+}
+.btn_mini_warning .btn_wrap {
+	background:url(images/btn_all.gif) no-repeat right -187px;
+	color: #ffffff;
+}
+.btn_small_warning {
+	background:url(images/btn_all.gif) 0 -229px;
+}
+.btn_small_warning .btn_wrap {
+	background:url(images/btn_all.gif) no-repeat right -229px;
+	color: #ffffff;
+}
+.btn_default_warning {
+	background:url(images/btn_all.gif) 0 -276px;
+}
+.btn_default_warning .btn_wrap {
+	background:url(images/btn_all.gif) no-repeat right -276px;
+	color: #ffffff;
+}
+.btn_large_warning {
+	background:url(images/btn_all.gif) 0 -334px;
+}
+.btn_large_warning .btn_wrap {
+	background:url(images/btn_all.gif) no-repeat right -334px;
+	color: #ffffff;
+}
+
+/*蓝色按钮*/
+.btn_mini_important{
+	background:url(images/btn_all.gif) no-repeat 0 -400px;
+}
+.btn_mini_important .btn_wrap {
+	background:url(images/btn_all.gif) no-repeat right -400px;
+	color: #ffffff;
+}
+.btn_small_important{
+	background:url(images/btn_all.gif) no-repeat 0 -444px;
+}
+.btn_small_important .btn_wrap {
+	background:url(images/btn_all.gif) no-repeat right -444px;
+	color: #ffffff;
+}
+.btn_default_important{
+	background:url(images/btn_all.gif) no-repeat 0 -493px;
+}
+.btn_default_important .btn_wrap {
+	background:url(images/btn_all.gif) no-repeat right -493px;
+	color: #ffffff;
+}
+.btn_large_important{
+	background:url(images/btn_all.gif) no-repeat 0 -552px;
+}
+.btn_large_important .btn_wrap {
+	background:url(images/btn_all.gif) no-repeat right -552px;
+	color: #fff;
+}
+
+/*绿色按钮*/
+.btn_default_less {
+	background:url(images/btn_all.gif) no-repeat 0 -615px;
+}
+.btn_default_less .btn_wrap {
+	background:url(images/btn_all.gif) no-repeat right -615px;
+	color: #ffffff;
+}
+
+/*灰色可点按钮*/
+.btn_mini_normal {
+	background:url(images/btn_all.gif) no-repeat 0 -690px;
+}
+.btn_mini_normal .btn_wrap {
+	background:url(images/btn_all.gif) no-repeat right -690px;
+	color: #666666;
+}
+.btn_small_normal {
+	background:url(images/btn_all.gif) no-repeat 0 -741px;
+}
+.btn_small_normal .btn_wrap {
+	background:url(images/btn_all.gif) no-repeat right -741px;
+	color: #666666;
+}
+.btn_default_normal {
+	background:url(images/btn_all.gif) no-repeat 0 -795px;
+}
+.btn_default_normal .btn_wrap {
+	background:url(images/btn_all.gif) no-repeat right -795px;
+	color: #666666;
+}
+.btn_large_normal {
+	background:url(images/btn_all.gif) no-repeat 0 -861px;
+}
+.btn_large_normal .btn_wrap {
+	background:url(images/btn_all.gif) no-repeat right -861px;
+	color: #666666;
+}
+
+/*灰色不可点按钮*/
+.btn_mini_disabled {
+	background:url(images/btn_all.gif) no-repeat 0 -941px;
+}
+.btn_mini_disabled .btn_wrap {
+	background:url(images/btn_all.gif) no-repeat right -941px;
+	color: #666666;
+}
+.btn_small_disabled {
+	background:url(images/btn_all.gif) no-repeat 0 -996px;
+}
+.btn_small_disabled .btn_wrap {
+	background:url(images/btn_all.gif) no-repeat right -996px;
+	color: #666666;
+}
+.btn_default_disabled {
+	background:url(images/btn_all.gif) no-repeat 0 -1056px;
+}
+.btn_default_disabled .btn_wrap {
+	background:url(images/btn_all.gif) no-repeat right -1056px;
+	color: #666666;
+}
+.btn_large_disabled {
+	background:url(images/btn_all.gif) no-repeat 0 -1137px;
+}
+.btn_large_disabled .btn_wrap {
+	background:url(images/btn_all.gif) no-repeat right -1137px;
+	color: #666666;
+}
+
+/*通用按钮样式end*/
+
+
+/*文本框样式开始*/
+.inputSmall, .inputLarge, .inputMini, .inputDefault,.inputXLarge,.inputXXLarge, .inputXXXLarge {
+	padding: 0 4px;
+	height: 24px;
+	line-height: 24px;
+	vertical-align:-1px;
+	*vertical-align:-5px;
+	_vertical-align:-6px;
+	border: 1px solid #ddd;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+.inputMini{
+	width:24px;
+}
+.inputSmall {
+	width:44px;
+}
+.inputDefault {
+	width:62px;
+}
+.inputLarge {
+	width:104px;
+}
+.inputXLarge{
+	width: 146px;
+}
+.inputXXLarge{
+	width: 300px;
+}
+.inputXXXLarge {
+	width: 450px;
+}
+/*文本框样式结束*/
+/*tab切换 头部样式*/
+#tabChangeBox,.tabChangeBox{
+    overflow: hidden;
+    margin: 0;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    border-bottom: 1px solid #000;
+    width: 98%;
+}
+#tabChangeBox li,.tabChangeBox li{
+    float: left;
+    line-height: 24px;
+    list-style: none;
+    border: 1px solid #666;
+    border-radius:5px;
+    border-bottom-left-radius:0;
+    border-bottom-right-radius:0;
+    border-bottom: none;
+    margin-right: 5px;
+    background-color: #d3d3d3;
+}
+#tabChangeBox li a,.tabChangeBox li a{
+    display: inline-block;
+    padding: 0 15px;
+    text-align: center;
+    line-height: 30px;
+    color: #000;
+    font-size: 12px;
+    margin-bottom: -2px;
+}
+
+#tabChangeBox li a:visited,
+.tabChangeBox li a:visited{
+    color: #000;
+}
+#tabChangeBox li.tabChangeBox_current,
+.tabChangeBox li.tabChangeBox_current{
+    border-bottom: 1px solid #fff;
+    background-color:#fff;
+}
+
+.tipsBoxCommon {
+    width: auto;
+    line-height: 15px;
+    display: inline-block;
+    color: #000000 !important;
+    border: 1px solid #ff3300;
+    background: #b5ab0f;
+    margin-top: -20px;
+    margin-bottom: 4px;
+    padding: 0 4px;
+    font-style: normal;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.loading {
+    background: url("images/loading.gif") no-repeat center center;
+}

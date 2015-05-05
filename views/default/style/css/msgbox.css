@@ -1,0 +1,80 @@
+.msgbox {
+    position: fixed;
+    _position: absolute;
+    z-index: 5;
+    bottom: 0;
+    right: 10px;
+    border: 1px solid #4da1d1;
+    border-bottom: none;
+    padding: 1px 1px 0 1px;
+    width: 560px;
+    background-color: #fff;
+}
+
+.leftmsgbox {
+    left: 10px;
+}
+
+.rightmsgbox {
+	right: 2px;
+}
+
+.msgbox_wrap {
+
+}
+
+.msgbox_header {
+    padding: 0;
+    margin: 0;
+    line-height: 18px;
+    height: 18px;
+    text-indent: 2px;
+    font-size: 12px;
+    color: #fff;
+    background:#2990dc;
+    background-position:8px 11px;
+    cursor: pointer;
+}
+
+.msgbox_close {
+    height: 18px;
+    width: 60px;
+    min-height: 18px;
+}
+.msgbox_close .msgbox_header {
+    background-position:8px -34px;
+}
+
+.msgbox_close .msgboxContent {
+	display: none;
+}
+
+.msgbox em {
+    color: red;
+    font-style: normal;
+}
+.msgbox a {
+    text-decoration: none;
+}
+
+.msgbox .weiboyiGrid_table td {
+    padding: 8px 2px;
+}
+
+.msgbox_reservation {
+    border-bottom: 1px solid #4DA1D1;
+}
+
+.msgbox_group {
+    position: fixed;
+	bottom: 0;
+}
+
+.group_right {
+	right: 0;
+	bottom: 30px;
+}
+
+.msgbox_group_box {
+    position: static;
+}
