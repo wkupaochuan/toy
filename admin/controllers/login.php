@@ -79,7 +79,7 @@ class Login extends CI_Controller
 						if ($admin->status == 1)
 						{
 							$this->session->set_userdata('uid', $admin->uid);
-							redirect(setting('backend_access_point') . '/system/home');
+							redirect(setting('backend_access_point') . '/story/index/home');
 						}
 						else
 						{

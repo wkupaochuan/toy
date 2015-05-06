@@ -293,9 +293,9 @@ ul.grade li ul{padding-left:17px}
 		.thumbnail div span{display:none}
 /* thumbnail style end */
 /* login style start */
-body#login,body#login #footer{background:#ebebeb url(login_bg.gif) 0 0 repeat-x;}
+body#login,body#login #footer{background:#ebebeb url(images/login_bg.gif) 0 0 repeat-x;}
 body#login{background-position:0 36px;}	
-	.login_box,.login_title,.login_cont input.normal,.login_cont input.submit,.login_cont a.pwd{background:#fff url(loginbox_bg.gif) no-repeat}
+	.login_box,.login_title,.login_cont input.normal,.login_cont input.submit,.login_cont a.pwd{background:#fff url(images/loginbox_bg.gif) no-repeat}
 	.login_box{position:absolute;top: 50%;left:50%;width:334px;height:220px;margin: -132px 0 0 -167px;padding-bottom:30px;background-position:0 -15px;_background:none;}
 	.login_title{height:37px;padding-left:35px;color:#fff;text-align:left;font:bold 14px/37px Arial, Helvetica, sans-serif;}
 	.login_cont{height:152px;padding-top:30px;border:1px solid #b8b7b7;background:#fff}
